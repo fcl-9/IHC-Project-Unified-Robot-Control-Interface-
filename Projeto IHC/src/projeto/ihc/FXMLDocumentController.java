@@ -12,6 +12,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 
 
 /**
@@ -21,6 +28,8 @@ import javafx.scene.control.Label;
 public class FXMLDocumentController implements Initializable {
     
     private Label label;
+    @FXML
+    private AnchorPane background;
     
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
@@ -29,7 +38,11 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        BackgroundImage myBI= new BackgroundImage(new Image("/img/2016_Background_Dark_Grey_1322x600.png",32,32,false,true),
+        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+          BackgroundSize.DEFAULT);
+        //then you set to your node
+        background.setBackground(new Background(myBI));
     }    
     
 }
