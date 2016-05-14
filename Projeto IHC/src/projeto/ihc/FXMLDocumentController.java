@@ -13,18 +13,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+
 /**
  *
  * @author fabio
  */
 public class FXMLDocumentController implements Initializable {
     
-    @FXML
     private Label label;
-    @FXML
-    private Button button;
     
-    @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
         label.setText("Hello World!");
