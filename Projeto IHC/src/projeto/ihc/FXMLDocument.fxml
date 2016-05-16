@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -9,19 +13,19 @@
 
 <AnchorPane id="AnchorPane" fx:id="background" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-image: url('/img/2016_Background_Dark_Grey_1322x600.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ihc.FXMLDocumentController">
    <children>
-      <GridPane layoutY="6.0" prefHeight="790.0" prefWidth="1277.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="6.0">
+      <GridPane layoutX="-3.0" layoutY="-4.0" prefHeight="800.0" prefWidth="1287.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="-4.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1056.0" minWidth="10.0" prefWidth="890.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="611.0" minWidth="10.0" prefWidth="387.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="276.0" minHeight="0.0" prefHeight="98.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="527.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="619.0" minHeight="10.0" prefHeight="331.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="527.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="619.0" minHeight="10.0" prefHeight="381.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="276.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <GridPane style="-fx-background-color: #256b25;" GridPane.columnSpan="2">
+            <GridPane prefHeight="0.0" prefWidth="1204.0" style="-fx-background-color: #256b25;" GridPane.columnSpan="2">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="806.0" minWidth="10.0" prefWidth="788.0" />
@@ -41,15 +45,18 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" />
-                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="74.0" style="-fx-background-image: url('/img/helpIcon.png'); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-color: transparent;" />
+                        <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="74.0" style="-fx-background-image: url('/img/powerIcon.png'); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-color: transparent;" GridPane.columnIndex="2" />
+                        <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="74.0" style="-fx-background-image: url('/img/settingsIcon.png'); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-color: transparent;" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="240.0" style="-fx-background-color: transparent;" text="&lt;  Seleção De Robôs" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
                </children>
             </GridPane>
-            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TabPane cache="true" depthTest="DISABLE" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="2">
               <tabs>
                   <Tab text="Cãmaras">
                     <content>
@@ -68,33 +75,45 @@
                 </Tab>
               </tabs>
             </TabPane>
-            <GridPane GridPane.rowIndex="2">
+            <GridPane prefHeight="403.0" prefWidth="895.0" GridPane.rowIndex="2">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="520.0" minHeight="10.0" prefHeight="506.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="28.666671752929688" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="520.0" minHeight="10.0" prefHeight="351.3333282470703" vgrow="SOMETIMES" />
               </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2">
+                     <children>
+                        <Button layoutX="599.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="IV" />
+                        <Button layoutX="732.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Térmica" />
+                        <Label layoutX="460.0" layoutY="6.0" prefHeight="17.0" prefWidth="103.0" text="Modos da Câmara" />
+                        <Label layoutX="40.0" layoutY="6.0" text="Gravaçao" />
+                        <Button layoutX="116.0" layoutY="2.0" mnemonicParsing="false" text="Button" />
+                     </children>
+                  </Pane>
+               </children>
             </GridPane>
             <GridPane GridPane.columnSpan="2" GridPane.rowIndex="3">
               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="0.0" prefWidth="80.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="891.0" minWidth="10.0" prefWidth="234.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="838.0" minWidth="10.0" prefWidth="768.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="891.0" minWidth="10.0" prefWidth="234.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="80.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <GridPane prefHeight="121.0" prefWidth="561.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -107,8 +126,31 @@
                         <Label text="Comunicação" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
+                  <Pane prefHeight="317.0" prefWidth="429.0" GridPane.columnIndex="1" GridPane.rowSpan="2">
+                     <children>
+                        <Circle fill="DODGERBLUE" layoutX="124.0" layoutY="138.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowSpan="2">
+                     <children>
+                        <Pane layoutX="-70.0" layoutY="-11.0" prefHeight="200.0" prefWidth="87.0" />
+                        <Slider layoutX="23.0" layoutY="1.0" orientation="VERTICAL" prefHeight="276.0" prefWidth="14.0" />
+                     </children></Pane>
+                  <Slider orientation="VERTICAL" prefHeight="201.0" prefWidth="28.0" GridPane.halignment="RIGHT" GridPane.rowSpan="2" />
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2">
+                     <children>
+                        <Circle fill="DODGERBLUE" layoutX="106.0" layoutY="138.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </Pane>
                </children>
             </GridPane>
+            <AnchorPane GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <children>
+                  <Label layoutX="51.0" layoutY="15.0" text="Tempo da Missão" />
+                  <Label layoutX="592.0" layoutY="15.0" text="Velocidade" />
+                  <Label layoutX="1039.0" layoutY="15.0" prefHeight="17.0" prefWidth="42.0" text="Bateria" />
+               </children>
+            </AnchorPane>
          </children>
       </GridPane>
    </children>
