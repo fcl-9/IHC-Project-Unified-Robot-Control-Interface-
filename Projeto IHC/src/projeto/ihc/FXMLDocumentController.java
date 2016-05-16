@@ -38,11 +38,6 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        BackgroundImage myBI= new BackgroundImage(new Image("/img/2016_Background_Dark_Grey_1322x600.png",32,32,false,true),
-        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
-          BackgroundSize.DEFAULT);
-        //then you set to your node
-        background.setBackground(new Background(myBI));
     }    
     
 }
