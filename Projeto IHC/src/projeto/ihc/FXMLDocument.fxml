@@ -49,9 +49,9 @@
                         <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="74.0" style="-fx-background-image: url('/img/settingsIcon.png'); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-color: transparent;" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
-                  <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="240.0" style="-fx-background-color: transparent;" text="&lt;  Seleção De Robôs" textFill="WHITE">
+                  <Button id="goBack" mnemonicParsing="false" prefHeight="56.0" prefWidth="240.0" style="-fx-background-color: transparent;" text="&lt;  Seleção De Robôs" textFill="WHITE">
                      <font>
-                        <Font name="Balsamiq Sans Bold" size="18.0" />
+                        <Font name="Balsamiq Sans" size="18.0" />
                      </font></Button>
                </children>
             </GridPane>
