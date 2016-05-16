@@ -53,6 +53,7 @@
                      <font>
                         <Font name="Balsamiq Sans" size="18.0" />
                      </font></Button>
+                  <Text id="IdPagina" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
             <TabPane cache="true" depthTest="DISABLE" prefHeight="265.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="2">
