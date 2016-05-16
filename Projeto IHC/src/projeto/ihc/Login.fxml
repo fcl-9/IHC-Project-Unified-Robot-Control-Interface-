@@ -77,16 +77,16 @@
             </ImageView>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Label layoutX="318.0" layoutY="29.0" text="ID " textFill="#256b25">
+                  <Text fill="#256b25" layoutX="319.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                      <font>
                         <Font name="Balsamiq Sans" size="24.0" />
                      </font>
-                  </Label>
-                  <Label layoutX="243.0" layoutY="77.0" prefHeight="35.0" prefWidth="198.0" text="Palavra Passe" textFill="#256b25">
+                  </Text>
+                  <Text fill="#256b25" layoutX="250.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palavra Passe">
                      <font>
                         <Font name="Balsamiq Sans" size="24.0" />
                      </font>
-                  </Label>
+                  </Text>
                </children>
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
