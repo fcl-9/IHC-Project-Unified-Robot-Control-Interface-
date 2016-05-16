@@ -91,7 +91,10 @@
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
                            <children>
-                              <ImageView fitHeight="420.0" fitWidth="384.0" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="420.0" fitWidth="384.0" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/drone.png" />
+                                 </image></ImageView>
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
@@ -131,7 +134,10 @@
                            </children></Pane>
                         <Pane prefHeight="216.0" prefWidth="386.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
                            <children>
-                              <ImageView fitHeight="428.0" fitWidth="384.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="428.0" fitWidth="384.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/Submarine.png" />
+                                 </image></ImageView>
                            </children>
                         </Pane>
                      </children>
@@ -154,7 +160,10 @@
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
                            <children>
-                              <ImageView fitHeight="420.0" fitWidth="384.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="271.0" fitWidth="384.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/Robot.png" />
+                                 </image></ImageView>
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
