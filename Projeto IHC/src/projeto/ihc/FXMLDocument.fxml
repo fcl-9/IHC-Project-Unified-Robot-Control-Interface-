@@ -4,7 +4,6 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.paint.*?>
-<?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -13,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="background" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-image: url('/img/2016_Background_Dark_Grey_1322x600.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ihc.FXMLDocumentController">
    <children>
-      <GridPane layoutX="-3.0" layoutY="-4.0" prefHeight="800.0" prefWidth="1287.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="-4.0">
+      <GridPane layoutY="-1.0" prefHeight="797.0" prefWidth="1284.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1056.0" minWidth="10.0" prefWidth="890.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="611.0" minWidth="10.0" prefWidth="387.0" />
@@ -56,44 +55,146 @@
                      </font></Button>
                </children>
             </GridPane>
-            <TabPane cache="true" depthTest="DISABLE" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TabPane cache="true" depthTest="DISABLE" prefHeight="265.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="2">
               <tabs>
                   <Tab text="Cãmaras">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="275.0" prefWidth="173.0">
+                           <children>
+                              <GridPane layoutX="-11.0" layoutY="-9.0" prefHeight="370.0" prefWidth="423.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </children></AnchorPane>
                     </content>
                   </Tab>
                 <Tab text="Mapa">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="350.0" prefWidth="391.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="110.33334350585938" minHeight="7.6666717529296875" prefHeight="44.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="226.3333282470703" minHeight="7.0000152587890625" prefHeight="43.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="286.99998474121094" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="81.0" prefWidth="224.0" text="Latitude" textAlignment="CENTER" />
+                                    <Label prefHeight="81.0" prefWidth="224.0" text="Longitude" textAlignment="CENTER" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
                   </content>
                 </Tab>
                 <Tab text="Funções">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutY="1.0" prefHeight="352.0" prefWidth="390.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Posições Garras" GridPane.rowIndex="6" />
+                                    <Button mnemonicParsing="false" text="Retorno à Base" GridPane.rowIndex="5" />
+                                    <Button mnemonicParsing="false" text="Piloto Automatico" GridPane.rowIndex="4" />
+                                    <Button mnemonicParsing="false" text="Sensores" GridPane.rowIndex="3" />
+                                    <GridPane>
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1" />
+                                          <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" />
+                                          <Label text="Robô" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.rowIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1" />
+                                          <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" />
+                                          <Label text="Luzes" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.rowIndex="2">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
                   </content>
                 </Tab>
               </tabs>
             </TabPane>
-            <GridPane prefHeight="403.0" prefWidth="895.0" GridPane.rowIndex="2">
+            <GridPane prefHeight="403.0" prefWidth="895.0" style="-fx-background-color: white;" GridPane.rowIndex="2">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="28.666671752929688" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="520.0" minHeight="10.0" prefHeight="351.3333282470703" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="520.0" minHeight="10.0" prefHeight="348.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2">
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
                      <children>
-                        <Button layoutX="599.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="IV" />
-                        <Button layoutX="732.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Térmica" />
-                        <Label layoutX="460.0" layoutY="6.0" prefHeight="17.0" prefWidth="103.0" text="Modos da Câmara" />
-                        <Label layoutX="40.0" layoutY="6.0" text="Gravaçao" />
-                        <Button layoutX="116.0" layoutY="2.0" mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
+                        <Label text="Gravaçao" />
+                        <Label prefHeight="17.0" prefWidth="103.0" text="Modos da Câmara" GridPane.columnIndex="2" />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="IV" GridPane.columnIndex="3" />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Térmica" GridPane.columnIndex="4" />
                      </children>
-                  </Pane>
+                  </GridPane>
                </children>
             </GridPane>
             <GridPane GridPane.columnSpan="2" GridPane.rowIndex="3">
@@ -120,9 +221,9 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.rowIndex="1" />
-                        <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <RadioButton mnemonicParsing="false" text="Robô" GridPane.rowIndex="1" />
+                        <RadioButton mnemonicParsing="false" text="Equipa" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                         <Label text="Comunicação" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
@@ -149,6 +250,9 @@
                   <Label layoutX="51.0" layoutY="15.0" text="Tempo da Missão" />
                   <Label layoutX="592.0" layoutY="15.0" text="Velocidade" />
                   <Label layoutX="1039.0" layoutY="15.0" prefHeight="17.0" prefWidth="42.0" text="Bateria" />
+                  <Text layoutX="164.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="206.13671875" />
+                  <Text layoutX="684.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="206.13671875" />
+                  <Text layoutX="1098.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="85.5" />
                </children>
             </AnchorPane>
          </children>
