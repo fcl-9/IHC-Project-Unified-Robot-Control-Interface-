@@ -91,11 +91,11 @@
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
                            <children>
-                              <ImageView fitHeight="420.0" fitWidth="384.0" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                              <Button mnemonicParsing="false" opacity="0.0" prefHeight="571.0" prefWidth="386.0" />
+                              <ImageView fitHeight="420.0" fitWidth="384.0" layoutX="2.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/drone.png" />
                                  </image></ImageView>
-                              <Button mnemonicParsing="false" opacity="0.0" prefHeight="571.0" prefWidth="386.0" />
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
@@ -135,11 +135,11 @@
                            </children></Pane>
                         <Pane prefHeight="216.0" prefWidth="386.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
                            <children>
-                              <ImageView fitHeight="428.0" fitWidth="384.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                              <Button layoutX="1.0" layoutY="4.0" mnemonicParsing="false" opacity="0.0" prefHeight="575.0" prefWidth="386.0" />
+                              <ImageView fitHeight="428.0" fitWidth="384.0" layoutX="2.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/Submarine.png" />
                                  </image></ImageView>
-                              <Button layoutX="1.0" layoutY="4.0" mnemonicParsing="false" opacity="0.0" prefHeight="575.0" prefWidth="386.0" />
                            </children>
                         </Pane>
                      </children>
@@ -162,11 +162,11 @@
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
                            <children>
-                              <ImageView fitHeight="271.0" fitWidth="384.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                              <Button layoutX="-3.0" layoutY="3.0" mnemonicParsing="false" opacity="0.0" prefHeight="575.0" prefWidth="396.0" />
+                              <ImageView fitHeight="271.0" fitWidth="384.0" layoutX="2.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/Robot.png" />
                                  </image></ImageView>
-                              <Button layoutX="-3.0" layoutY="3.0" mnemonicParsing="false" opacity="0.0" prefHeight="575.0" prefWidth="396.0" />
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
