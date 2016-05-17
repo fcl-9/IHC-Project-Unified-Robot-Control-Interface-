@@ -21,7 +21,7 @@ public class ProjetoIHC extends Application {
     @Override
     public void start(Stage stage) throws Exception 
     {
-        Parent root = FXMLLoader.load(getClass().getResource("Definicoes.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Garras.fxml"));
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/resources/abc.css");
