@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -14,17 +16,22 @@
    <children>
       <GridPane layoutY="-1.0" prefHeight="797.0" prefWidth="1284.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1056.0" minWidth="10.0" prefWidth="890.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="631.0" minWidth="10.0" prefWidth="36.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1056.0" minWidth="10.0" prefWidth="901.6666641235352" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1056.0" minWidth="10.0" prefWidth="36.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="611.0" minWidth="10.0" prefWidth="387.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="611.0" minWidth="10.0" prefWidth="36.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="276.0" minHeight="0.0" prefHeight="98.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="527.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="619.0" minHeight="10.0" prefHeight="381.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="276.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="527.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="619.0" minHeight="10.0" prefHeight="404.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="619.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="2763.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <GridPane prefHeight="0.0" prefWidth="1204.0" style="-fx-background-color: #256b25;" GridPane.columnSpan="2">
+            <GridPane prefHeight="90.0" prefWidth="1246.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-width: 0 0 5 0;" GridPane.columnSpan="5">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="806.0" minWidth="10.0" prefWidth="788.0" />
@@ -51,16 +58,19 @@
                   </GridPane>
                   <Button id="goBack" mnemonicParsing="false" prefHeight="56.0" prefWidth="240.0" style="-fx-background-color: transparent;" text="&lt;  Seleção De Robôs" textFill="WHITE">
                      <font>
-                        <Font name="Balsamiq Sans" size="18.0" />
+                        <Font name="Balsamiq Sans Bold" size="18.0" />
                      </font></Button>
-                  <Text id="IdPagina" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Text id="IdPagina" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Balsamiq Sans" size="36.0" />
+                     </font></Text>
                </children>
             </GridPane>
-            <TabPane cache="true" depthTest="DISABLE" prefHeight="265.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TabPane cache="true" depthTest="DISABLE" prefHeight="265.0" prefWidth="200.0" stylesheets="@../../resources/tabpane.css" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="3" GridPane.rowIndex="2">
               <tabs>
-                  <Tab text="Cãmaras">
+                  <Tab text="Câmaras">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="275.0" prefWidth="173.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="275.0" prefWidth="173.0" style="-fx-border-color: black;">
                            <children>
                               <GridPane layoutX="-11.0" layoutY="-9.0" prefHeight="370.0" prefWidth="423.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columnConstraints>
@@ -71,13 +81,42 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 0 0 2 0;">
+                                       <children>
+                                          <ImageView fitHeight="121.0" fitWidth="361.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../img/P60507-105728.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button layoutY="-1.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="364.0" style="-fx-background-color: transparent;" />
+                                       </children></Pane>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 0 0 2 0;" GridPane.rowIndex="1">
+                                       <children>
+                                          <ImageView fitHeight="121.0" fitWidth="361.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../img/P60507-105743.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button mnemonicParsing="false" prefHeight="123.0" prefWidth="364.0" style="-fx-background-color: transparent;" />
+                                       </children></Pane>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <ImageView fitHeight="121.0" fitWidth="361.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../img/P60507-105734.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button mnemonicParsing="false" prefHeight="123.0" prefWidth="364.0" style="-fx-background-color: transparent;" />
+                                       </children></Pane>
+                                 </children>
                               </GridPane>
                            </children></AnchorPane>
                     </content>
                   </Tab>
                 <Tab text="Mapa">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black;">
                            <children>
                               <GridPane prefHeight="350.0" prefWidth="391.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columnConstraints>
@@ -90,10 +129,23 @@
                                   <RowConstraints maxHeight="286.99998474121094" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label prefHeight="81.0" prefWidth="224.0" text="Latitude" textAlignment="CENTER" />
-                                    <Label prefHeight="81.0" prefWidth="224.0" text="Longitude" textAlignment="CENTER" GridPane.columnIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label prefHeight="35.0" prefWidth="73.0" text="Latitude" textAlignment="CENTER" textFill="#256b25" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Balsamiq Sans Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label prefHeight="43.0" prefWidth="88.0" text="Longitude" textAlignment="CENTER" textFill="#256b25" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font name="Balsamiq Sans Bold" size="18.0" />
+                                       </font></Label>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Balsamiq Sans" size="18.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Balsamiq Sans" size="18.0" />
+                                       </font></Text>
+                                    <Pane id="map" fx:id="map" prefHeight="261.0" prefWidth="312.0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
                                  </children>
                               </GridPane>
                            </children></AnchorPane>
@@ -101,11 +153,13 @@
                 </Tab>
                 <Tab text="Funções">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black;">
                            <children>
                               <GridPane layoutY="1.0" prefHeight="352.0" prefWidth="390.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.33331298828125" minWidth="0.0" prefWidth="0.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="311.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="0.0" />
                                 </columnConstraints>
                                 <rowConstraints>
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -117,11 +171,23 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Button mnemonicParsing="false" text="Posições Garras" GridPane.rowIndex="6" />
-                                    <Button mnemonicParsing="false" text="Retorno à Base" GridPane.rowIndex="5" />
-                                    <Button mnemonicParsing="false" text="Piloto Automatico" GridPane.rowIndex="4" />
-                                    <Button mnemonicParsing="false" text="Sensores" GridPane.rowIndex="3" />
-                                    <GridPane>
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="367.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Posições Garras" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Balsamiq Sans" size="18.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="341.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Retorno à Base" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Balsamiq Sans" size="18.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="316.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Piloto Automatico" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Balsamiq Sans" size="18.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="340.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Sensores" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Balsamiq Sans" size="18.0" />
+                                       </font></Button>
+                                    <GridPane GridPane.columnIndex="1">
                                       <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -131,12 +197,21 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <RadioButton mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1" />
-                                          <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" />
-                                          <Label text="Robô" />
+                                          <RadioButton mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Balsamiq Sans" size="18.0" />
+                                             </font></RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Balsamiq Sans" size="18.0" />
+                                             </font></RadioButton>
+                                          <Label text="Robô" textFill="#256b25">
+                                             <font>
+                                                <Font name="Balsamiq Sans Bold" size="18.0" />
+                                             </font></Label>
                                        </children>
                                     </GridPane>
-                                    <GridPane GridPane.rowIndex="1">
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                                       <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -146,12 +221,21 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <RadioButton mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1" />
-                                          <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" />
-                                          <Label text="Luzes" />
+                                          <RadioButton mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Balsamiq Sans" size="18.0" />
+                                             </font></RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Balsamiq Sans" size="18.0" />
+                                             </font></RadioButton>
+                                          <Label text="Luzes" textFill="#256b25">
+                                             <font>
+                                                <Font name="Balsamiq Sans Bold" size="18.0" />
+                                             </font></Label>
                                        </children>
                                     </GridPane>
-                                    <GridPane GridPane.rowIndex="2">
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
                                       <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -168,37 +252,7 @@
                 </Tab>
               </tabs>
             </TabPane>
-            <GridPane prefHeight="403.0" prefWidth="895.0" style="-fx-background-color: white;" GridPane.rowIndex="2">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="520.0" minHeight="10.0" prefHeight="348.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <GridPane>
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
-                        <Label text="Gravaçao" />
-                        <Label prefHeight="17.0" prefWidth="103.0" text="Modos da Câmara" GridPane.columnIndex="2" />
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="IV" GridPane.columnIndex="3" />
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Térmica" GridPane.columnIndex="4" />
-                     </children>
-                  </GridPane>
-               </children>
-            </GridPane>
-            <GridPane GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <GridPane GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="0.0" prefWidth="80.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="891.0" minWidth="10.0" prefWidth="234.0" />
@@ -222,28 +276,183 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <RadioButton mnemonicParsing="false" text="Robô" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                        <RadioButton mnemonicParsing="false" text="Equipa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                        <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                        <Label text="Comunicação" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton mnemonicParsing="false" text="Robô" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Balsamiq Sans" size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Equipa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Balsamiq Sans" size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Balsamiq Sans" size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <Label text="Comunicação" textFill="#256b25" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Balsamiq Sans Bold" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
                   </GridPane>
-                  <Slider orientation="VERTICAL" prefHeight="201.0" prefWidth="28.0" GridPane.halignment="RIGHT" GridPane.rowSpan="2" />
-                  <Slider orientation="VERTICAL" GridPane.columnIndex="4" GridPane.rowSpan="2" />
                   <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowSpan="2" />
                   <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowSpan="2" />
+                  <GridPane GridPane.rowSpan="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="61.0" minHeight="8.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Slider orientation="VERTICAL" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowSpan="3" />
+                        <Label prefHeight="154.0" prefWidth="25.0" style="-fx-rotate: -90;" text="Label" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="26.0" style="-fx-background-image: url('/img/handOpen.png'); -fx-background-color: transparent; -fx-background-repeat: no-repeat;" />
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="26.0" style="-fx-background-image: url('/img/handClosed.png'); -fx-background-color: transparent; -fx-background-repeat: no-repeat;" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="4" GridPane.rowSpan="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Slider orientation="VERTICAL" GridPane.rowSpan="3" />
+                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="26.0" style="-fx-background-image: url('/img/speedDown.png'); -fx-background-color: transparent; -fx-background-repeat: no-repeat;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="26.0" style="-fx-background-image: url('/img/speedUp.png'); -fx-background-color: transparent; -fx-background-repeat: no-repeat;" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+                     </children>
+                  </GridPane>
                </children>
             </GridPane>
-            <AnchorPane GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <GridPane GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
                <children>
-                  <Label layoutX="51.0" layoutY="15.0" text="Tempo da Missão" />
-                  <Label layoutX="592.0" layoutY="15.0" text="Velocidade" />
-                  <Label layoutX="1039.0" layoutY="15.0" prefHeight="17.0" prefWidth="42.0" text="Bateria" />
-                  <Text layoutX="164.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="206.13671875" />
-                  <Text layoutX="684.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="206.13671875" />
-                  <Text layoutX="1098.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="85.5" />
+                  <Label text="Tempo de Missão:" textAlignment="RIGHT" textFill="#256b25" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font name="Balsamiq Sans Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Velocidade:" textFill="#256b25" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font name="Balsamiq Sans Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Bateria:" textFill="#256b25" GridPane.columnIndex="4" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font name="Balsamiq Sans Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="00:00:00" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Balsamiq Sans" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Balsamiq Sans" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5">
+                     <font>
+                        <Font name="Balsamiq Sans" size="18.0" />
+                     </font>
+                  </Text>
                </children>
-            </AnchorPane>
+            </GridPane>
+            <GridPane style="-fx-border-color: black; -fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="124.66668701171875" minHeight="0.0" prefHeight="45.333343505859375" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="313.3333282470703" minHeight="10.0" prefHeight="290.6666564941406" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="350.0" fitWidth="876.0" pickOnBounds="true" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                     <image>
+                        <Image url="@../../img/P60507-095804.jpg" />
+                     </image>
+                  </ImageView>
+                  <GridPane prefHeight="39.0" prefWidth="930.0" style="-fx-border-color: black; -fx-background-color: white;">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="42.0" style="-fx-background-image: url('/img/recIcon.png'); -fx-background-color: transparent; -fx-background-position: center; -fx-background-repeat: no-repeat;" GridPane.columnIndex="2" />
+                        <Label prefHeight="43.0" prefWidth="199.0" text="Gravaçao" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Balsamiq Sans Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="51.0" prefWidth="201.0" text="Modos da Câmara" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="Balsamiq Sans" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="175.0" style="-fx-background-color: cc0000; -fx-border-color: black; -fx-border-radius: 0;" text="IV" textFill="WHITE" GridPane.columnIndex="4">
+                           <font>
+                              <Font name="Balsamiq Sans" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="184.0" style="-fx-background-color: cc0000; -fx-border-color: black; -fx-border-radius: 0;" text="Térmica" textFill="WHITE" GridPane.columnIndex="6">
+                           <font>
+                              <Font name="Balsamiq Sans" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.33332824707031" minWidth="9.999998092651367" prefWidth="14.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.00000190734863" minWidth="10.0" prefWidth="108.33334350585938" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="109.33334350585938" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.3333282470703" minWidth="10.0" prefWidth="199.00003051757812" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="312.33331298828125" minWidth="10.0" prefWidth="166.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="0.0" prefWidth="14.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="166.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="14.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane GridPane.rowIndex="2">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.33334350585938" minWidth="0.0" prefWidth="16.000001907348633" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.99999809265137" minWidth="10.0" prefWidth="465.99999809265137" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.6666259765625" minWidth="10.0" prefWidth="229.6666259765625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.3333740234375" minWidth="8.3333740234375" prefWidth="16.3333740234375" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="42.0" style="-fx-background-image: url('/img/minusIcon.png'); -fx-background-color: transparent; -fx-background-position: center; -fx-background-repeat: no-repeat;" GridPane.columnIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="42.0" style="-fx-background-image: url('/img/plusIcon.png'); -fx-background-color: transparent; -fx-background-position: center; -fx-background-repeat: no-repeat;" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
          </children>
       </GridPane>
    </children>

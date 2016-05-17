@@ -24,20 +24,5 @@
     font-weight: bold;
     font-style: italic;
      src: url('BalsamiqSansBoldItalic.ttf') format('truetype');
-}
-
-
-
-.text {
-    -fx-font-family: "Balsamiq Sans";
-}
-
-#goBack {
-    -fx-font-size: 18px;
-}
-
-#IdPagina{
-    -fx-font-family: "Balsamiq Sans";
-    -fx-font-size: 36px;
     
 }
