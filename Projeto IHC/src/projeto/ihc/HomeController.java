@@ -25,7 +25,7 @@ import javafx.scene.layout.BackgroundSize;
  *
  * @author fabio
  */
-public class FXMLDocumentController implements Initializable {
+public class HomeController implements Initializable {
     
     private Label label;
     @FXML

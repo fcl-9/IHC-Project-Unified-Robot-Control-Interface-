@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="background" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-image: url('/img/2016_Background_Dark_Grey_1322x600.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ihc.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="background" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-image: url('/img/2016_Background_Dark_Grey_1322x600.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ihc.HomeController">
    <children>
       <GridPane layoutY="-1.0" prefHeight="797.0" prefWidth="1284.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
