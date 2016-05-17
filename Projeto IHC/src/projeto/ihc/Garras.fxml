@@ -90,7 +90,7 @@
                         <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
                               <Text fill="#256b25" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição 1">
                                  <font>
@@ -99,7 +99,7 @@
                               </Text>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <children>
                               <Text fill="#256b25" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição 2">
                                  <font>
@@ -108,7 +108,7 @@
                               </Text>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="5" GridPane.rowIndex="1">
                            <children>
                               <Text fill="#256b25" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição 3">
                                  <font>
@@ -117,7 +117,7 @@
                               </Text>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <children>
                               <Text fill="#256b25" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição 4">
                                  <font>
@@ -126,7 +126,7 @@
                               </Text>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="4">
                            <children>
                               <Text fill="#256b25" strokeType="OUTSIDE" strokeWidth="0.0" text="Posiçao 5">
                                  <font>
@@ -135,7 +135,7 @@
                               </Text>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="5" GridPane.rowIndex="4">
                            <children>
                               <Text fill="#256b25" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição 6">
                                  <font>
@@ -144,54 +144,60 @@
                               </Text>
                            </children>
                         </HBox>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <children>
-                              <ImageView fitHeight="232.0" fitWidth="380.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../img/Posicao1.1.png" />
-                                 </image></ImageView>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                           <children>
-                              <ImageView fitHeight="232.0" fitWidth="376.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="217.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/Posicao2.png" />
-                                 </image></ImageView>
+                                 </image>
+                              </ImageView>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="2">
                            <children>
-                              <ImageView fitHeight="238.0" fitWidth="378.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="217.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/Posicao3.png" />
-                                 </image></ImageView>
+                                 </image>
+                              </ImageView>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
-                              <ImageView fitHeight="232.0" fitWidth="372.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="217.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/Posicao1.1.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <ImageView fitHeight="217.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/Posicao4.png" />
-                                 </image></ImageView>
+                                 </image>
+                              </ImageView>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="231.0" prefWidth="263.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="5">
                            <children>
-                              <ImageView fitHeight="232.0" fitWidth="335.0" layoutX="-2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="217.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/Posicao5.png" />
-                                 </image></ImageView>
+                                 </image>
+                              </ImageView>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="5">
                            <children>
-                              <ImageView fitHeight="232.0" fitWidth="335.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="217.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/Posicao6.png" />
-                                 </image></ImageView>
+                                 </image>
+                              </ImageView>
                            </children>
-                        </Pane>
+                        </HBox>
                      </children>
                   </GridPane>
                </children>
