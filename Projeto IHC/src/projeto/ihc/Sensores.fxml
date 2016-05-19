@@ -60,41 +60,11 @@
                      </font></Text>
                </children>
             </GridPane>
-         </children>
-      </GridPane>
-      <GridPane prefHeight="799.0" prefWidth="1282.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="594.9999985694885" minWidth="522.6666679382324" prefWidth="567.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="611.6666259765625" minWidth="541.3333740234375" prefWidth="546.6666259765625" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="260.3333435058594" minHeight="0.0" prefHeight="93.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="664.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="664.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="664.0" minHeight="10.0" prefHeight="617.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane prefHeight="799.0" prefWidth="1282.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" GridPane.rowSpan="2147483647">
                <children>
-                  <GridPane layoutX="2.0" prefHeight="600.0" prefWidth="591.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                  </GridPane>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="600.0" layoutY="-2.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="591.0" />
-                  <GridPane layoutX="1.0" layoutY="-1.0" prefHeight="588.0" prefWidth="588.0">
+                  <GridPane layoutX="1.0" layoutY="-1.0" prefHeight="588.0" prefWidth="588.0" style="-fx-border-color: black;" GridPane.columnIndex="1">
                      <children>
-                        <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="6">
                            <children>
                               <Text layoutX="89.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300m">
                                  <font>
@@ -102,8 +72,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="6">
                            <children>
                               <Text layoutX="86.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300m">
                                  <font>
@@ -111,8 +81,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <children>
                               <Text fill="#256b25" layoutX="95.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sonar">
                                  <font>
@@ -120,8 +90,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="6.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="6.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="5">
                            <children>
                               <Text fill="#256b25" layoutX="67.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UltraSom">
                                  <font>
@@ -129,8 +99,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
                               <Text fill="#256b25" layoutX="50.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperatura">
                                  <font>
@@ -138,8 +108,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <children>
                               <Text fill="#256b25" layoutX="54.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Luz Ambiente">
                                  <font>
@@ -147,26 +117,26 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="66.0" prefWidth="72.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="66.0" prefWidth="72.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="9">
                            <children>
-                              <Text layoutX="45.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pode Ligar um sensor Extra" wrappingWidth="174.75">
+                              <Text layoutX="45.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pode Ligar um sensor Extra" textAlignment="CENTER" wrappingWidth="174.75">
                                  <font>
                                     <Font name="Balsamiq Sans" size="24.0" />
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="103.0" prefWidth="164.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="103.0" prefWidth="164.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="9">
                            <children>
-                              <Text layoutX="37.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pode Ligar um sensor Extra" wrappingWidth="174.75">
+                              <Text layoutX="37.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pode Ligar um sensor Extra" textAlignment="CENTER" wrappingWidth="174.75">
                                  <font>
                                     <Font name="Balsamiq Sans" size="24.0" />
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="13.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="13.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="8">
                            <children>
                               <Text fill="#256b25" layoutX="63.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sem Sensor">
                                  <font>
@@ -174,8 +144,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="113.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="113.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="8">
                            <children>
                               <Text fill="#256b25" layoutX="59.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sem Sensor">
                                  <font>
@@ -183,17 +153,17 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3">
                            <children>
-                              <Text layoutX="209.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ambiente">
+                              <Text layoutX="-39.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ambiente" textAlignment="CENTER" wrappingWidth="105.0">
                                  <font>
                                     <Font name="Balsamiq Sans" size="24.0" />
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <children>
                               <Text layoutX="90.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25 ºc">
                                  <font>
@@ -201,8 +171,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="138.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="138.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <children>
                               <Text layoutX="82.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300 lm">
                                  <font>
@@ -210,7 +180,7 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
+                        </HBox>
                      </children>
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="36.0" minWidth="36.0" prefWidth="36.0" />
@@ -233,34 +203,9 @@
                         <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                   </GridPane>
-               </children>
-            </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="600.0" layoutX="1.0" layoutY="1.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="570.0" />
-                  <GridPane layoutX="3.0" prefHeight="593.0" prefWidth="569.0">
-                    <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="36.0" minWidth="36.0" prefWidth="36.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="36.0" minWidth="36.0" prefWidth="36.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
+                  <GridPane alignment="CENTER" layoutX="3.0" prefHeight="593.0" prefWidth="569.0" style="-fx-border-color: black;" GridPane.columnIndex="3">
                      <children>
-                        <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="6">
                            <children>
                               <Text layoutX="106.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5º">
                                  <font>
@@ -268,8 +213,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="6">
                            <children>
                               <Text layoutX="80.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55 km/h">
                                  <font>
@@ -277,8 +222,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <children>
                               <Text fill="#256b25" layoutX="62.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inclinação">
                                  <font>
@@ -286,8 +231,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="6.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="6.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="5">
                            <children>
                               <Text fill="#256b25" layoutX="58.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velocidade">
                                  <font>
@@ -295,8 +240,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
                               <Text fill="#256b25" layoutX="81.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bateria">
                                  <font>
@@ -304,8 +249,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <children>
                               <Text fill="#256b25" layoutX="75.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Altitude">
                                  <font>
@@ -313,26 +258,26 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="66.0" prefWidth="72.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="66.0" prefWidth="72.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="9">
                            <children>
-                              <Text layoutX="39.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pode Ligar um sensor Extra" wrappingWidth="174.75">
+                              <Text layoutX="39.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pode Ligar um sensor Extra" textAlignment="CENTER" wrappingWidth="174.75">
                                  <font>
                                     <Font name="Balsamiq Sans" size="24.0" />
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="103.0" prefWidth="164.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="103.0" prefWidth="164.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="9">
                            <children>
-                              <Text layoutX="28.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pode Ligar um sensor Extra" wrappingWidth="174.75">
+                              <Text layoutX="28.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pode Ligar um sensor Extra" textAlignment="CENTER" wrappingWidth="174.75">
                                  <font>
                                     <Font name="Balsamiq Sans" size="24.0" />
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="13.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="13.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="1" GridPane.rowIndex="8">
                            <children>
                               <Text fill="#256b25" layoutX="54.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sem sensor">
                                  <font>
@@ -340,8 +285,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="113.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="113.0" style="-fx-border-color: black; -fx-border-width: 2 2 0 2;" GridPane.columnIndex="3" GridPane.rowIndex="8">
                            <children>
                               <Text fill="#256b25" layoutX="48.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sem Sensor">
                                  <font>
@@ -349,8 +294,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3">
                            <children>
                               <Text layoutX="162.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado do Robô">
                                  <font>
@@ -358,8 +303,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <children>
                               <Text layoutX="94.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="80%">
                                  <font>
@@ -367,8 +312,8 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="0.0" prefWidth="138.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="138.0" style="-fx-border-color: black; -fx-border-width: 2;" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <children>
                               <Text layoutX="82.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300 m">
                                  <font>
@@ -376,12 +321,42 @@
                                  </font>
                               </Text>
                            </children>
-                        </Pane>
+                        </HBox>
                      </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="36.0" minWidth="36.0" prefWidth="36.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="36.0" minWidth="36.0" prefWidth="36.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
                   </GridPane>
                </children>
-            </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="36.0" minWidth="36.0" prefWidth="36.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="686.0" minWidth="130.0" prefWidth="568.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="0.0" prefWidth="81.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="630.0" minWidth="165.0" prefWidth="565.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="36.0" minWidth="36.0" prefWidth="36.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="648.0" minHeight="257.0" prefHeight="592.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="648.0" minHeight="48.0" prefHeight="64.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
          </children>
       </GridPane>
    </children>

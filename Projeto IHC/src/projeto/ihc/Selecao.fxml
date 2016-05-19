@@ -75,108 +75,79 @@
           <RowConstraints maxHeight="664.0000152587891" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="571.0" stroke="BLACK" strokeType="INSIDE" width="386.0" />
                   <GridPane layoutX="-1.0" layoutY="1.0" prefHeight="572.0" prefWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="391.0" minHeight="10.0" prefHeight="363.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="200.0" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fill="#256b25" layoutX="143.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AirBot" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Balsamiq Sans" size="36.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="296.0" fitWidth="380.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@../../img/drone.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="413.0" prefWidth="386.0" style="-fx-border-color: black; -fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="200.0" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
-                           <children>
-                              <Button mnemonicParsing="false" opacity="0.0" prefHeight="571.0" prefWidth="386.0" />
-                              <ImageView fitHeight="420.0" fitWidth="384.0" layoutX="2.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../img/drone.png" />
-                                 </image></ImageView>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
-                           <children>
-                              <Text fill="#256b25" layoutX="143.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AirBot">
-                                 <font>
-                                    <Font name="Balsamiq Sans" size="36.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </Pane>
+                        <Text fill="#256b25" strokeType="OUTSIDE" strokeWidth="0.0" text="WaterBot" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Balsamiq Sans" size="36.0" />
+                           </font>
+                        </Text>
+                        <Button mnemonicParsing="false" opacity="0.0" prefHeight="575.0" prefWidth="386.0" GridPane.rowSpan="2" />
+                        <ImageView fitHeight="269.0" fitWidth="386.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@../../img/Submarine.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </GridPane>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="413.0" prefWidth="386.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="571.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="386.0" />
-                  <GridPane layoutX="47.0" layoutY="29.0" prefHeight="577.0" prefWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="192.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="194.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Pane prefHeight="124.0" prefWidth="386.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
-                           <children>
-                              <Text fill="#256b25" layoutX="114.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WaterBot">
-                                 <font>
-                                    <Font name="Balsamiq Sans" size="36.0" />
-                                 </font>
-                              </Text>
-                           </children></Pane>
-                        <Pane prefHeight="216.0" prefWidth="386.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
-                           <children>
-                              <Button layoutX="1.0" layoutY="4.0" mnemonicParsing="false" opacity="0.0" prefHeight="575.0" prefWidth="386.0" />
-                              <ImageView fitHeight="428.0" fitWidth="384.0" layoutX="2.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../img/Submarine.png" />
-                                 </image></ImageView>
-                           </children>
-                        </Pane>
-                     </children>
-                  </GridPane>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="571.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" width="386.0" />
                   <GridPane layoutX="47.0" layoutY="29.0" prefHeight="578.0" prefWidth="387.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="200.0" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
-                           <children>
-                              <Button layoutX="-3.0" layoutY="3.0" mnemonicParsing="false" opacity="0.0" prefHeight="575.0" prefWidth="396.0" />
-                              <ImageView fitHeight="271.0" fitWidth="384.0" layoutX="2.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../img/Robot.png" />
-                                 </image></ImageView>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
-                           <children>
-                              <Text fill="#256b25" layoutX="126.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EarthBot">
-                                 <font>
-                                    <Font size="36.0" />
-                                 </font>
-                              </Text>
-                           </children></Pane>
+                        <Button layoutX="-3.0" layoutY="3.0" mnemonicParsing="false" opacity="0.0" prefHeight="575.0" prefWidth="396.0" />
+                        <Text fill="#256b25" layoutX="126.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EarthBot" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="328.0" fitWidth="369.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@../../img/Robot.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </GridPane>
                </children>
