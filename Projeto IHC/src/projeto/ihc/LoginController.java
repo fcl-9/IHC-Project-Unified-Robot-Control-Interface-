@@ -38,6 +38,12 @@ public class LoginController implements Initializable {
     private AnchorPane background;
     @FXML
     private Button loginButton;
+    @FXML
+    private Button helpLoginButton;
+    @FXML
+    private Button powerButton;
+    @FXML
+    private AnchorPane helpBlackLayout;
     
     private void handleButtonAction(ActionEvent event) {
     }
@@ -49,10 +55,33 @@ public class LoginController implements Initializable {
     @FXML
     private void onLoginClicked(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
-        
-        Scene scene = new Scene(root);
-        Stage actualStage = (Stage) loginButton.getScene().getWindow();
-        actualStage.setScene(scene);
+        loginButton.getScene().setRoot(root);
     }
+
+
+
+    @FXML
+    /**
+     * Método que fará a interface ser fechada quando se clica no botão com o id
+     * powerButton
+     */
+    private void powerButtonHandle(MouseEvent event) {
+        Stage stage = (Stage) powerButton.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    /**
+     * Método que fará a interface ser modificada quando se clica no botão com o id helpLoginButton
+     */
+    private void helpLoginHandle(MouseEvent event) {
+        Stage stage = (Stage) helpLoginButton.getScene().getWindow();
+        //background.
+        helpBlackLayout.setStyle("-fx-background-color: black;");
+        helpBlackLayout.setOpacity(0.8);
+    //stage.setOpacity(0.8);
+    }
+    
+    
     
 }
