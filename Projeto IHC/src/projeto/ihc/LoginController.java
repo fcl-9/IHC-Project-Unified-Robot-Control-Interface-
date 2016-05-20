@@ -42,6 +42,8 @@ public class LoginController implements Initializable {
     private Button helpLoginButton;
     @FXML
     private Button powerButton;
+    @FXML
+    private AnchorPane helpBlackLayout;
     
     private void handleButtonAction(ActionEvent event) {
     }
@@ -77,8 +79,10 @@ public class LoginController implements Initializable {
      */
     private void helpLoginHandle(MouseEvent event) {
         Stage stage = (Stage) helpLoginButton.getScene().getWindow();
-        
-//stage.setOpacity(0.8);
+        //background.
+        helpBlackLayout.setStyle("-fx-background-color: black;");
+        helpBlackLayout.setOpacity(0.8);
+    //stage.setOpacity(0.8);
     }
     
     
