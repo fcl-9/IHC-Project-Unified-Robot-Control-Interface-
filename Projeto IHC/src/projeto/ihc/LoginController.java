@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -24,6 +25,7 @@ import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 
@@ -42,9 +44,23 @@ public class LoginController implements Initializable {
     private Button helpLoginButton;
     @FXML
     private Button powerButton;
-    @FXML
-    private AnchorPane helpBlackLayout;
     
+    private AnchorPane helpBlackLayout;
+    @FXML
+    private GridPane mainGrid;
+    @FXML
+    private TextField idText;
+    @FXML
+    private TextField passText;
+    @FXML
+    private GridPane gridUpperBar;
+    private GridPane gridButton;
+    @FXML
+    private GridPane gridMainWindow;
+    private AnchorPane helpUpperBlackLayout;
+    private AnchorPane buttonBlackScreen;
+    @FXML
+    private GridPane gridButtons;
     private void handleButtonAction(ActionEvent event) {
     }
     
@@ -75,11 +91,27 @@ public class LoginController implements Initializable {
      * Método que fará a interface ser modificada quando se clica no botão com o id helpLoginButton
      */
     private void helpLoginHandle(MouseEvent event) {
-        Stage stage = (Stage) helpLoginButton.getScene().getWindow();
-        //background.
+        helpBlackLayout = new AnchorPane(); 
+        gridMainWindow.add(helpBlackLayout, 0, 0,gridMainWindow.REMAINING,gridMainWindow.REMAINING);
         helpBlackLayout.setStyle("-fx-background-color: black;");
-        helpBlackLayout.setOpacity(0.8);
-    //stage.setOpacity(0.8);
+        helpBlackLayout.setOpacity(0.6);
+        idText.toFront();
+        passText.toFront();
+        loginButton.toFront();
+        helpUpperBlackLayout = new AnchorPane();
+        gridUpperBar.add(helpUpperBlackLayout,0,0,gridUpperBar.REMAINING - 1,gridUpperBar.REMAINING);
+        helpUpperBlackLayout.setStyle("-fx-background-color: black;");
+        helpUpperBlackLayout.setOpacity(0.6);        
+        
+
+
+        buttonBlackScreen = new AnchorPane();
+        gridButton.add(buttonBlackScreen, 0, 0,gridButton.REMAINING,gridButton.REMAINING);
+        buttonBlackScreen.setStyle("-fx-background-color: black;");
+        buttonBlackScreen.setOpacity(0.6);
+        powerButton.toFront();
+//Bringing the buttons that we want to show mto front
+      
     }
     
     
