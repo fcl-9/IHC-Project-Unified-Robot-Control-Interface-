@@ -53,10 +53,7 @@ public class LoginController implements Initializable {
     @FXML
     private void onLoginClicked(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
-        
-        Scene scene = new Scene(root);
-        Stage actualStage = (Stage) loginButton.getScene().getWindow();
-        actualStage.setScene(scene);
+        loginButton.getScene().setRoot(root);
     }
 
 
