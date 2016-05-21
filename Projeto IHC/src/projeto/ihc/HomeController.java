@@ -8,7 +8,9 @@ package projeto.ihc;
 import java.awt.Point;
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
+import java.util.TimeZone;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -103,10 +105,11 @@ public class HomeController implements Initializable {
     @FXML
     private Text tempoMissao;
     
+    private Thread apresentaTempo;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        ApresentaTempo apresentaTempo = new ApresentaTempo();
-        tempoMissao.setText(Float.toString(apresentaTempo.getTempoPassado()));
+        apresentaTempo = new Thread(new ApresentaTempo(tempoMissao));
         myBrowser = new MyBrowser();
         map.getChildren().add(myBrowser);
         cam1.fitWidthProperty().bind(camPane1.widthProperty());
@@ -128,6 +131,7 @@ public class HomeController implements Initializable {
      * This method switches the atual screen to the help screen
      */
     private void sensorButtonClicked(MouseEvent event) throws IOException {
+        apresentaTempo.interrupt();
         Parent root = FXMLLoader.load(getClass().getResource("Sensores.fxml"));
         sensorButton.getScene().setRoot(root);
     }
@@ -137,6 +141,7 @@ public class HomeController implements Initializable {
      * This method switches the atual screen to the help screen
      */
     private void garrasButtonClicked(MouseEvent event) throws IOException {
+//        apresentaTempo.interrupt();
         Parent root = FXMLLoader.load(getClass().getResource("Garras.fxml"));
         garrasButton.getScene().setRoot(root);
     }
@@ -146,6 +151,7 @@ public class HomeController implements Initializable {
      * This method switches the atual screen to the help screen
      */
     private void helpButtonClicked(MouseEvent event) throws IOException {
+        apresentaTempo.interrupt();
         Parent root = FXMLLoader.load(getClass().getResource("AjudaPrincipal.fxml"));
         helpButton.getScene().setRoot(root);
     }
@@ -155,6 +161,7 @@ public class HomeController implements Initializable {
      * This method closes the application
      */
     private void powerButtonClicked(MouseEvent event) {
+//        apresentaTempo.interrupt();
         Stage stage = (Stage) powerButton.getScene().getWindow();
         stage.close();
     }
@@ -164,6 +171,7 @@ public class HomeController implements Initializable {
      * This method switches the atual screen to the settings screen
      */
     private void settingsButtonClicked(MouseEvent event) throws IOException {
+//        apresentaTempo.interrupt();
         Parent root = FXMLLoader.load(getClass().getResource("Definicoes.fxml"));
         settingsButton.getScene().setRoot(root);
     }
@@ -173,6 +181,7 @@ public class HomeController implements Initializable {
      * This method switches the atual screen to the previous one
      */
     private void backButtonClicked(MouseEvent event) throws IOException {
+//        apresentaTempo.interrupt();
         Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
         settingsButton.getScene().setRoot(root);
     }

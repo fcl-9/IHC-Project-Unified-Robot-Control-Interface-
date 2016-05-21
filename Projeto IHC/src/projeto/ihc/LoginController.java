@@ -85,6 +85,8 @@ public class LoginController implements Initializable {
 
     @FXML
     private void onLoginClicked(MouseEvent event) throws IOException {
+        ContaTempo contaTempo = new ContaTempo();
+        contaTempo.start();
         Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
         loginButton.getScene().setRoot(root);
     }

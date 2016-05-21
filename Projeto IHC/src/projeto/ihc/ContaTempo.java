@@ -16,27 +16,20 @@ import javafx.scene.text.Text;
  *
  * @author vmcba
  */
-public class ApresentaTempo implements Runnable{
-    
+public class ContaTempo implements Runnable{
     private Thread t;
-    private Text tempo;
-    
-    public ApresentaTempo (Text tempo) {
-        this.tempo = tempo;
-        start();
+    private static float tempoPassado;
+
+    public static float getTempoPassado() {
+        return tempoPassado;
     }
+   
     
     public void run() {
-        while (!Thread.interrupted()) {
-            ContaTempo apresentaTempo = new ContaTempo();
-            SimpleDateFormat ft = new SimpleDateFormat ("HH:mm:ss");
-            ft.setTimeZone(TimeZone.getTimeZone("GMT"));
-            tempo.setText(ft.format(apresentaTempo.getTempoPassado()));
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(ApresentaTempo.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        GregorianCalendar inicio = new GregorianCalendar();
+        while (true) {
+            GregorianCalendar dataAtual = new GregorianCalendar();
+            tempoPassado = dataAtual.getTimeInMillis() - inicio.getTimeInMillis();
         }
     }
    
@@ -49,4 +42,5 @@ public class ApresentaTempo implements Runnable{
             t.start ();
         }
     }
+    
 }
