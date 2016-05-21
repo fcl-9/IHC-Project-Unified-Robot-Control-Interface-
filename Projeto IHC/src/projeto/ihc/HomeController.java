@@ -105,6 +105,8 @@ public class HomeController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ApresentaTempo apresentaTempo = new ApresentaTempo();
+        tempoMissao.setText(Float.toString(apresentaTempo.getTempoPassado()));
         myBrowser = new MyBrowser();
         map.getChildren().add(myBrowser);
         cam1.fitWidthProperty().bind(camPane1.widthProperty());
