@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="background" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-image: url('/img/2016_Background_Dark_Grey_1322x600.jpg');" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ihc.LoginController">
    <children>
-      <GridPane layoutY="-1.0" prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <GridPane fx:id="mainGrid" layoutY="-1.0" prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1056.0" minWidth="10.0" prefWidth="890.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="611.0" minWidth="10.0" prefWidth="387.0" />
@@ -25,7 +25,7 @@
           <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="276.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <GridPane prefHeight="0.0" prefWidth="1204.0" style="-fx-background-color: #256b25;" GridPane.columnSpan="2">
+            <GridPane fx:id="gridUpperBar" prefHeight="0.0" prefWidth="1204.0" style="-fx-background-color: #256b25;" GridPane.columnSpan="2">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="806.0" minWidth="10.0" prefWidth="788.0" />
@@ -35,7 +35,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <GridPane prefHeight="146.0" prefWidth="343.0" GridPane.columnIndex="2">
+                  <GridPane fx:id="gridButtons" prefHeight="146.0" prefWidth="343.0" GridPane.columnIndex="2">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -55,7 +55,7 @@
                      </font></Text>
                </children>
             </GridPane>
-            <GridPane prefHeight="800.0" prefWidth="1280.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
+            <GridPane fx:id="gridMainWindow" prefHeight="800.0" prefWidth="1280.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="903.0" minWidth="10.0" prefWidth="352.0" />
@@ -83,8 +83,8 @@
                         <Font name="Balsamiq Sans" size="24.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="58.0" layoutY="82.0" prefHeight="37.0" prefWidth="79.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <TextField layoutX="58.0" layoutY="26.0" prefHeight="37.0" prefWidth="332.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <TextField fx:id="idText" layoutX="58.0" layoutY="82.0" prefHeight="37.0" prefWidth="79.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <TextField fx:id="passText" layoutX="58.0" layoutY="26.0" prefHeight="37.0" prefWidth="332.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                   <Button fx:id="loginButton" layoutX="97.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onLoginClicked" prefHeight="37.0" prefWidth="254.0" style="-fx-background-color: #256b25;" text="Login" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Balsamiq Sans" size="24.0" />
@@ -97,7 +97,6 @@
                   </ImageView>
                </children>
             </GridPane>
-            <AnchorPane fx:id="helpBlackLayout" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647" />
          </children>
       </GridPane>
    </children>
