@@ -28,7 +28,9 @@ import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -77,13 +79,29 @@ public class HomeController implements Initializable {
     @FXML
     private Pane camPane1;
     @FXML
+    private AnchorPane paneGarraBaixo;
+    @FXML
+    private AnchorPane paneGarraControl;
+    @FXML
     private Circle controlGarra;
     @FXML
     private Circle circleBaixoGarra;
+    @FXML
+    private AnchorPane paneMovBaixo;
+    @FXML
+    private AnchorPane paneMovControl;
+    @FXML
+    private Circle controlMov;
+    @FXML
+    private Circle circleBaixoMov;
+    
     
     private int joyOutputRange = 100;
-    private double joySize;
-    private double posicaoX, posicaoY;
+    private double joySizeGarras, joySizeMov, posicaoX, posicaoY;
+    @FXML
+    private Button garrasButton1;
+    @FXML
+    private Text tempoMissao;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -97,7 +115,10 @@ public class HomeController implements Initializable {
         cam2.fitHeightProperty().bind(camPane2.heightProperty());
         cam3.fitHeightProperty().bind(camPane3.heightProperty());
         cam4.fitHeightProperty().bind(camPane4.heightProperty());
-        joySize = circleBaixoGarra.getRadius()/2;
+        circleBaixoGarra.setFill(new ImagePattern(new Image("/img/joystick.png")));
+        circleBaixoMov.setFill(new ImagePattern(new Image("/img/joystick.png")));
+        joySizeGarras = circleBaixoGarra.getRadius()/2;
+        joySizeMov = circleBaixoMov.getRadius()/2;
     }
     
     @FXML
@@ -165,15 +186,15 @@ public class HomeController implements Initializable {
         curJoySize = (float) Point.distance(event.getSceneX(), event.getSceneY(),
                 orgSceneX, orgSceneY);
         
-        if (curJoySize < joySize) {
+        if (curJoySize < joySizeGarras) {
             ((Circle)(event.getSource())).setTranslateX(newTranslateX);
             ((Circle)(event.getSource())).setTranslateY(newTranslateY);   
         }
         
         posicaoX = (int) (joyOutputRange * (Math.cos(curJoyAngle)
-                * curJoySize) / joySize);
+                * curJoySize) / joySizeGarras);
         posicaoY = (int) (joyOutputRange * (-(Math.sin(curJoyAngle)
-                * curJoySize) / joySize));
+                * curJoySize) / joySizeGarras));
         
         System.out.println("X:" + posicaoX + " Y: " + posicaoY);
         
@@ -189,6 +210,45 @@ public class HomeController implements Initializable {
 
     @FXML
     private void libertaControlGarra(MouseEvent event) {
+        ((Circle)(event.getSource())).setTranslateX(orgTranslateX);
+        ((Circle)(event.getSource())).setTranslateY(orgTranslateY);
+    }
+    
+     @FXML
+    private void controlaMovimento(MouseEvent event) {
+        double offsetX = event.getSceneX() - orgSceneX;
+        double offsetY = event.getSceneY() - orgSceneY;
+        double newTranslateX = orgTranslateX + offsetX;
+        double newTranslateY = orgTranslateY + offsetY;
+        
+        curJoyAngle = (float) Math.atan2(newTranslateY, newTranslateX);
+        curJoySize = (float) Point.distance(event.getSceneX(), event.getSceneY(),
+                orgSceneX, orgSceneY);
+        
+        if (curJoySize < joySizeMov) {
+            ((Circle)(event.getSource())).setTranslateX(newTranslateX);
+            ((Circle)(event.getSource())).setTranslateY(newTranslateY);   
+        }
+        
+        posicaoX = (int) (joyOutputRange * (Math.cos(curJoyAngle)
+                * curJoySize) / joySizeMov);
+        posicaoY = (int) (joyOutputRange * (-(Math.sin(curJoyAngle)
+                * curJoySize) / joySizeMov));
+        
+        System.out.println("X:" + posicaoX + " Y: " + posicaoY);
+        
+    }
+    
+    @FXML
+    private void tocaControlMovimento(MouseEvent event) {
+        orgSceneX = event.getSceneX();
+        orgSceneY = event.getSceneY();
+        orgTranslateX = ((Circle)(event.getSource())).getTranslateX();
+        orgTranslateY = ((Circle)(event.getSource())).getTranslateY();
+    }
+
+    @FXML
+    private void libertaControlMovimento(MouseEvent event) {
         ((Circle)(event.getSource())).setTranslateX(orgTranslateX);
         ((Circle)(event.getSource())).setTranslateY(orgTranslateY);
     }
