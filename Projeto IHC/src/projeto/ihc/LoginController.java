@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -26,6 +28,8 @@ import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -59,8 +63,19 @@ public class LoginController implements Initializable {
     private GridPane gridMainWindow;
     private AnchorPane helpUpperBlackLayout;
     private AnchorPane buttonBlackScreen;
+    private AnchorPane transparentAnchor;
     @FXML
     private GridPane gridButtons;
+    private Button leaveHelp;
+    
+    private Text help_PowerButton;
+    private Text help_ExitHelp;
+    private Text help_id;
+    private Text help_password;
+    private Text help_login;
+    
+    
+    
     private void handleButtonAction(ActionEvent event) {
     }
     
@@ -97,23 +112,73 @@ public class LoginController implements Initializable {
         helpBlackLayout.setOpacity(0.6);
         idText.toFront();
         passText.toFront();
-        loginButton.toFront();
-        helpUpperBlackLayout = new AnchorPane();
-        gridUpperBar.add(helpUpperBlackLayout,0,0,gridUpperBar.REMAINING - 1,gridUpperBar.REMAINING);
-        helpUpperBlackLayout.setStyle("-fx-background-color: black;");
-        helpUpperBlackLayout.setOpacity(0.6);        
+        loginButton.toFront();  
         
-
-
+        helpUpperBlackLayout = new AnchorPane();
+        gridUpperBar.add(helpUpperBlackLayout,0,0,2,1);
+        helpUpperBlackLayout.setStyle("-fx-background-color: black;");
+        helpUpperBlackLayout.setOpacity(0.6);
+        
         buttonBlackScreen = new AnchorPane();
-        gridButton.add(buttonBlackScreen, 0, 0,gridButton.REMAINING,gridButton.REMAINING);
+        gridButtons.add(buttonBlackScreen, 0, 0,3,1);
         buttonBlackScreen.setStyle("-fx-background-color: black;");
         buttonBlackScreen.setOpacity(0.6);
         powerButton.toFront();
-//Bringing the buttons that we want to show mto front
-      
+        
+        //Disable buttons funcionalities
+        transparentAnchor = new AnchorPane();
+        mainGrid.add(transparentAnchor, 0, 0,3,4);
+        
+        leaveHelp = new Button();
+        leaveHelp.setStyle(
+"-fx-background-radius: 5em;" +	
+"                -fx-min-width: 40px; " +
+"                -fx-min-height: 40px;" +
+"                -fx-max-width: 40px; " +
+"                -fx-max-height: 40px;" +
+"                -fx-background-repeat: no-repeat;" + 
+"                -fx-background-size: 40px 40px;"+
+"                -fx-background-image: url('/img/exitButton.png')"      
+        );
+        leaveHelp.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                leaveHelpButtonFunction();
+            }
+        });
+        
+        AnchorPane.setLeftAnchor(leaveHelp,1220.0);
+        AnchorPane.setTopAnchor(leaveHelp,100.0);
+        transparentAnchor.getChildren().add(leaveHelp);
+        
+    help_PowerButton = new Text(1000,80,"Toque aqui para sair da aplicação");
+    help_PowerButton.setFill(Color.WHITE);
+    help_ExitHelp = new Text(1000,220,"Toque aqui para sair da ajuda");
+    help_ExitHelp.setFill(Color.WHITE);
+    help_id = new Text(500,500,"1) Introduza o seu nome de utilizador");
+    help_id.setFill(Color.WHITE);
+    help_password = new Text(500,500,"2) Introduza a sua palavra passe");
+    help_password.setFill(Color.WHITE);
+    help_login = new Text(500,500,"3) Toque em login para iniciar sessão");
+    help_login.setFill(Color.WHITE);  
+        
+    transparentAnchor.getChildren().add(help_PowerButton);
+    transparentAnchor.getChildren().add(help_ExitHelp);
+    transparentAnchor.getChildren().add(help_id);
+    transparentAnchor.getChildren().add(help_password);
+    transparentAnchor.getChildren().add(help_login);
     }
     
-    
+    private void leaveHelpButtonFunction(){
+     helpBlackLayout.setStyle("-fx-background-color: transparent;");
+     helpBlackLayout.setOpacity(1);
+     helpUpperBlackLayout.setStyle("-fx-background-color: transparent;");
+     helpUpperBlackLayout.setOpacity(1);
+     buttonBlackScreen.setStyle("-fx-background-color: transparent;");
+     buttonBlackScreen.setOpacity(1);
+     transparentAnchor.getChildren().remove(leaveHelp);
+     mainGrid.getChildren().remove(transparentAnchor);
+     powerButton.toFront();
+     helpLoginButton.toFront();
+    }
     
 }
