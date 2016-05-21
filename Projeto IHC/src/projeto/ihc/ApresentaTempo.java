@@ -20,14 +20,20 @@ public class ApresentaTempo implements Runnable{
     
     private Thread t;
     private Text tempo;
+    private boolean running;
+
+    public void setRunning(boolean running) {
+        this.running = running;
+    }
     
     public ApresentaTempo (Text tempo) {
         this.tempo = tempo;
+        this.running = true;
         start();
     }
     
     public void run() {
-        while (!Thread.interrupted()) {
+        while (running) {
             ContaTempo apresentaTempo = new ContaTempo();
             SimpleDateFormat ft = new SimpleDateFormat ("HH:mm:ss");
             ft.setTimeZone(TimeZone.getTimeZone("GMT"));
