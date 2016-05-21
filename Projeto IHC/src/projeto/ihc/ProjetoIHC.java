@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.stage.Stage;
 /**
+ * 
  *
  * @author fabio
  */
@@ -21,7 +22,7 @@ public class ProjetoIHC extends Application {
     @Override
     public void start(Stage stage) throws Exception 
     {
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/resources/abc.css");
