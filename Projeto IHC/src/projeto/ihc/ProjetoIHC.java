@@ -14,7 +14,6 @@ import javafx.scene.control.Tab;
 import javafx.stage.Stage;
 /**
  * 
- *
  * @author fabio
  */
 public class ProjetoIHC extends Application {
