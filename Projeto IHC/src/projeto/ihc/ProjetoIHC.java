@@ -22,7 +22,7 @@ public class ProjetoIHC extends Application {
     @Override
     public void start(Stage stage) throws Exception 
     {
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("AjudaPrincipal.fxml"));
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/resources/abc.css");
