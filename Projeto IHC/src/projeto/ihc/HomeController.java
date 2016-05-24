@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 import java.util.TimeZone;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,6 +20,8 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -103,8 +106,6 @@ public class HomeController implements Initializable {
     private int joyOutputRange = 100;
     private double joySizeGarras, joySizeMov, posicaoX, posicaoY;
     @FXML
-    private Button garrasButton1;
-    @FXML
     private Text tempoMissao;
     
     private ApresentaTempo apresentaTempo;
@@ -114,9 +115,27 @@ public class HomeController implements Initializable {
     private RadioButton teamCommunication;
     @FXML
     private RadioButton turnOffCommunication;
+    @FXML
+    private TabPane tabPane;
+    @FXML
+    private Button mapButton;
+    @FXML
+    private Text idEcra;
+    @FXML
+    private Tab mapTab;
+    @FXML
+    private Tab funcTab;
+    @FXML
+    private Text recInfo;
+    @FXML
+    private Button recButton;
+    
+    private boolean gravar;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        gravar = false;
+        tabPane.getSelectionModel().select(2);
         apresentaTempo = new ApresentaTempo(tempoMissao);
         myBrowser = new MyBrowser();
         map.getChildren().add(myBrowser);
@@ -132,6 +151,10 @@ public class HomeController implements Initializable {
         robotCommunication.setToggleGroup(groupRadio);
         teamCommunication.setToggleGroup(groupRadio);
         turnOffCommunication.setToggleGroup(groupRadio);
+        turnOffCommunication.setSelected(true);
+        recInfo.setOpacity(0);
+        mapButton.setOpacity(0);
+        mapButton.setDisable(true);
         circleBaixoGarra.setFill(new ImagePattern(new Image("/img/joystick.png")));
         circleBaixoMov.setFill(new ImagePattern(new Image("/img/joystick.png")));
         joySizeGarras = circleBaixoGarra.getRadius()/2;
@@ -298,6 +321,51 @@ public class HomeController implements Initializable {
         Image camAtual = cam1.getImage();
         cam1.setImage(imagemCam4);
         cam4.setImage(camAtual);
+    }
+
+    @FXML
+    private void goBackToBase(MouseEvent event) {
+        tabPane.getSelectionModel().select(1);
+        mapButton.setOpacity(100);
+        mapButton.setDisable(false);
+        idEcra.setText("Retorno à Base");
+        mapButton.setText("Retornar à Base");
+    }
+
+    @FXML
+    private void goPilotoAutomatico(MouseEvent event) {
+        tabPane.getSelectionModel().select(1);
+        mapButton.setOpacity(100);
+        mapButton.setDisable(false);
+        idEcra.setText("Piloto Automático");
+        mapButton.setText("Ativar Piloto Automático");
+    }
+
+    @FXML
+    private void camTabClicked(Event event) {
+        idEcra.setText("Home");
+    }
+
+    @FXML
+    private void mapTabClicked(Event event) {
+        idEcra.setText("Mapa");
+    }
+
+    @FXML
+    private void funcTabClicked(Event event) {
+        idEcra.setText("Funções");
+    }
+
+    @FXML
+    private void recButtonClicked(MouseEvent event) {
+        if (!gravar) {
+            recInfo.setOpacity(100);
+            gravar = true;
+        } else {
+            recInfo.setOpacity(0);
+            gravar = false;
+        }
+        
     }
     
 }

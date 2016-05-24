@@ -60,15 +60,15 @@
                      <font>
                         <Font name="Balsamiq Sans Bold" size="18.0" />
                      </font></Button>
-                  <Text id="IdPagina" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Text id="IdPagina" fx:id="idEcra" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Balsamiq Sans" size="36.0" />
                      </font></Text>
                </children>
             </GridPane>
-            <TabPane cache="true" depthTest="DISABLE" prefHeight="265.0" prefWidth="200.0" stylesheets="@../../resources/tabpane.css" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <TabPane fx:id="tabPane" cache="true" depthTest="DISABLE" prefHeight="265.0" prefWidth="200.0" stylesheets="@../../resources/tabpane.css" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="3" GridPane.rowIndex="2">
               <tabs>
-                  <Tab text="Câmaras">
+                  <Tab onSelectionChanged="#camTabClicked" text="Câmaras">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="275.0" prefWidth="173.0" style="-fx-border-color: black;">
                            <children>
@@ -114,7 +114,7 @@
                            </children></AnchorPane>
                     </content>
                   </Tab>
-                <Tab text="Mapa">
+                <Tab fx:id="mapTab" onSelectionChanged="#mapTabClicked" text="Mapa">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black;">
                            <children>
@@ -146,18 +146,18 @@
                                        <font>
                                           <Font name="Balsamiq Sans" size="18.0" />
                                        </font></Text>
-                                    <Button fx:id="garrasButton1" layoutX="-16.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#garrasButtonClicked" prefHeight="35.0" prefWidth="349.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Posições Garras" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                    <Pane fx:id="map" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+                                    <Button fx:id="mapButton" mnemonicParsing="false" onMouseClicked="#garrasButtonClicked" prefHeight="35.0" prefWidth="349.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Map Button" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="Balsamiq Sans" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Pane fx:id="map" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
                                  </children>
                               </GridPane>
                            </children></AnchorPane>
                   </content>
                 </Tab>
-                <Tab text="Funções">
+                <Tab fx:id="funcTab" onSelectionChanged="#funcTabClicked" text="Funções">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black;">
                            <children>
@@ -181,11 +181,11 @@
                                        <font>
                                           <Font name="Balsamiq Sans" size="18.0" />
                                        </font></Button>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="341.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Retorno à Base" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <Button mnemonicParsing="false" onMouseClicked="#goBackToBase" prefHeight="25.0" prefWidth="341.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Retorno à Base" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Balsamiq Sans" size="18.0" />
                                        </font></Button>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="316.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Piloto Automatico" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                    <Button mnemonicParsing="false" onMouseClicked="#goPilotoAutomatico" prefHeight="25.0" prefWidth="316.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Piloto Automatico" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Balsamiq Sans" size="18.0" />
                                        </font></Button>
@@ -424,12 +424,17 @@
                               <Image url="@../../img/P60507-095804.jpg" />
                            </image>
                         </ImageView>
+                        <Text fx:id="recInfo" fill="RED" layoutX="23.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A GRAVAR">
+                           <font>
+                              <Font name="Balsamiq Sans" size="18.0" />
+                           </font>
+                        </Text>
                         
                      </children>
                   </Pane>
                   <GridPane prefHeight="39.0" prefWidth="930.0" style="-fx-border-color: black; -fx-background-color: white;">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="42.0" style="-fx-background-image: url('/img/recIcon.png'); -fx-background-color: transparent; -fx-background-position: center; -fx-background-repeat: no-repeat;" GridPane.columnIndex="2" />
+                        <Button fx:id="recButton" mnemonicParsing="false" onMouseClicked="#recButtonClicked" prefHeight="49.0" prefWidth="42.0" style="-fx-background-image: url('/img/recIcon.png'); -fx-background-color: transparent; -fx-background-position: center; -fx-background-repeat: no-repeat;" GridPane.columnIndex="2" />
                         <Label prefHeight="43.0" prefWidth="199.0" text="Gravaçao" GridPane.columnIndex="1">
                            <font>
                               <Font name="Balsamiq Sans Bold" size="18.0" />
