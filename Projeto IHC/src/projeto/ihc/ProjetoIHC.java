@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.stage.Stage;
 /**
+ * 
  *
  * @author fabio
  */
@@ -28,6 +29,7 @@ public class ProjetoIHC extends Application {
         
         stage.setScene(scene);
         stage.show();
+        //stage.setFullScreen(true);
     }
 
     /**
