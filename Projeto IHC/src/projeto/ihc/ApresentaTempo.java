@@ -33,9 +33,9 @@ public class ApresentaTempo implements Runnable{
     }
     
     public void run() {
+        ContaTempo apresentaTempo = new ContaTempo();
+        SimpleDateFormat ft = new SimpleDateFormat ("HH:mm:ss");
         while (running) {
-            ContaTempo apresentaTempo = new ContaTempo();
-            SimpleDateFormat ft = new SimpleDateFormat ("HH:mm:ss");
             ft.setTimeZone(TimeZone.getTimeZone("GMT"));
             tempo.setText(ft.format(apresentaTempo.getTempoPassado()));
             try {

@@ -152,15 +152,15 @@ public class LoginController implements Initializable {
         AnchorPane.setTopAnchor(leaveHelp,100.0);
         transparentAnchor.getChildren().add(leaveHelp);
         
-    help_PowerButton = new Text(1000,80,"Toque aqui para sair da aplicação");
+    help_PowerButton = new Text(1100,80,"Toque aqui para sair da aplicação");
     help_PowerButton.setFill(Color.WHITE);
-    help_ExitHelp = new Text(1000,220,"Toque aqui para sair da ajuda");
+    help_ExitHelp = new Text(1110,160,"Toque aqui para sair da ajuda");
     help_ExitHelp.setFill(Color.WHITE);
-    help_id = new Text(500,500,"1) Introduza o seu nome de utilizador");
+    help_id = new Text(950,505,"1) Introduza o seu nome de utilizador");
     help_id.setFill(Color.WHITE);
-    help_password = new Text(500,500,"2) Introduza a sua palavra passe");
+    help_password = new Text(950,590,"2) Introduza a sua palavra passe");
     help_password.setFill(Color.WHITE);
-    help_login = new Text(500,500,"3) Toque em login para iniciar sessão");
+    help_login = new Text(775,655,"3) Toque em login para iniciar sessão");
     help_login.setFill(Color.WHITE);  
         
     transparentAnchor.getChildren().add(help_PowerButton);
