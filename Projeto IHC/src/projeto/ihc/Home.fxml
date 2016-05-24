@@ -203,11 +203,11 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <RadioButton mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1">
+                                          <RadioButton fx:id="powerOnRobo" mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1">
                                              <font>
                                                 <Font name="Balsamiq Sans" size="18.0" />
                                              </font></RadioButton>
-                                          <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2">
+                                          <RadioButton fx:id="powerOffRobo" mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2">
                                              <font>
                                                 <Font name="Balsamiq Sans" size="18.0" />
                                              </font></RadioButton>
@@ -227,11 +227,11 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <RadioButton mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1">
+                                          <RadioButton fx:id="lightOn" mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1">
                                              <font>
                                                 <Font name="Balsamiq Sans" size="18.0" />
                                              </font></RadioButton>
-                                          <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2">
+                                          <RadioButton fx:id="lightOff" mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2">
                                              <font>
                                                 <Font name="Balsamiq Sans" size="18.0" />
                                              </font></RadioButton>

@@ -116,6 +116,14 @@ public class HomeController implements Initializable {
     @FXML
     private RadioButton turnOffCommunication;
     @FXML
+    private RadioButton powerOnRobo;
+    @FXML
+    private RadioButton powerOffRobo;
+    @FXML
+    private RadioButton lightOn;
+    @FXML
+    private RadioButton lightOff;
+@FXML
     private TabPane tabPane;
     @FXML
     private Button mapButton;
@@ -128,8 +136,7 @@ public class HomeController implements Initializable {
     @FXML
     private Text recInfo;
     @FXML
-    private Button recButton;
-    
+    private Button recButton;    
     private boolean gravar;
     
     @Override
