@@ -15,6 +15,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -85,10 +87,40 @@ public class LoginController implements Initializable {
 
     @FXML
     private void onLoginClicked(MouseEvent event) throws IOException {
+        
+        if(idText.getText().trim().isEmpty() && passText.getText().trim().isEmpty())
+        {
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Os campos de inserção de dados devem estar preenchidos.");
+            alert.setContentText("Para efetuar login deve preencher os campos ID com o nome de "
+                    + "utilizador e, Palavra passe com a sua palavra passe!");
+
+            alert.showAndWait();
+        }
+        else if(idText.getText().trim().isEmpty())
+        {
+           Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Erro um dos campos de inserção de dados não foi preenchido.");
+            alert.setContentText("Para efetuar login deve preencher o campo ID com o seu nome de utilizador");
+            alert.showAndWait(); 
+        }
+        else if (passText.getText().trim().isEmpty())
+        {
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Erro um dos campos de inserção de dados não foi preenchido.");
+            alert.setContentText("Para efetuar login deve preencher ambos o campo Palavra Passe com a sua palavra passe.");
+            alert.showAndWait();
+        }
+        else
+        {
         ContaTempo contaTempo = new ContaTempo();
         contaTempo.start();
         Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
         loginButton.getScene().setRoot(root);
+        }
     }
 
 
@@ -108,6 +140,8 @@ public class LoginController implements Initializable {
      * Método que fará a interface ser modificada quando se clica no botão com o id helpLoginButton
      */
     private void helpLoginHandle(MouseEvent event) {
+        
+      
         helpBlackLayout = new AnchorPane(); 
         gridMainWindow.add(helpBlackLayout, 0, 0,gridMainWindow.REMAINING,gridMainWindow.REMAINING);
         helpBlackLayout.setStyle("-fx-background-color: black;");
@@ -168,6 +202,7 @@ public class LoginController implements Initializable {
     transparentAnchor.getChildren().add(help_id);
     transparentAnchor.getChildren().add(help_password);
     transparentAnchor.getChildren().add(help_login);
+        
     }
     
     private void leaveHelpButtonFunction(){
