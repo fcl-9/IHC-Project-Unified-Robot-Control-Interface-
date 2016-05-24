@@ -114,6 +114,14 @@ public class HomeController implements Initializable {
     private RadioButton teamCommunication;
     @FXML
     private RadioButton turnOffCommunication;
+    @FXML
+    private RadioButton powerOnRobo;
+    @FXML
+    private RadioButton powerOffRobo;
+    @FXML
+    private RadioButton lightOn;
+    @FXML
+    private RadioButton lightOff;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -132,6 +140,17 @@ public class HomeController implements Initializable {
         robotCommunication.setToggleGroup(groupRadio);
         teamCommunication.setToggleGroup(groupRadio);
         turnOffCommunication.setToggleGroup(groupRadio);
+        
+        ToggleGroup groupTurnRobot = new ToggleGroup();
+        powerOnRobo.setToggleGroup(groupTurnRobot);
+        powerOffRobo.setToggleGroup(groupTurnRobot);
+        powerOffRobo.setSelected(true);
+        
+        ToggleGroup groupLight = new ToggleGroup();
+        lightOn.setToggleGroup(groupLight);
+        lightOff.setToggleGroup(groupLight);
+        lightOff.setSelected(true);
+        
         circleBaixoGarra.setFill(new ImagePattern(new Image("/img/joystick.png")));
         circleBaixoMov.setFill(new ImagePattern(new Image("/img/joystick.png")));
         joySizeGarras = circleBaixoGarra.getRadius()/2;
