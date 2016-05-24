@@ -84,30 +84,30 @@
                                  <children>
                                     <Pane fx:id="camPane2" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 0 0 2 0;">
                                        <children>
-                                          <ImageView fx:id="cam2" fitHeight="121.0" fitWidth="361.0" pickOnBounds="true">
+                                           
+                                          <ImageView fx:id="cam2" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara2" pickOnBounds="true">
                                              <image>
                                                 <Image url="@../../img/P60507-105728.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Button layoutY="-1.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="364.0" style="-fx-background-color: transparent;" />
                                        </children></Pane>
                                     <Pane fx:id="camPane3" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 0 0 2 0;" GridPane.rowIndex="1">
                                        <children>
-                                          <ImageView fx:id="cam3" fitHeight="121.0" fitWidth="361.0" pickOnBounds="true">
+                                           
+                                          <ImageView fx:id="cam3" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara3" pickOnBounds="true">
                                              <image>
                                                 <Image url="@../../img/P60507-105743.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Button mnemonicParsing="false" prefHeight="123.0" prefWidth="364.0" style="-fx-background-color: transparent;" />
                                        </children></Pane>
                                     <Pane fx:id="camPane4" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                                        <children>
-                                          <ImageView fx:id="cam4" fitHeight="121.0" fitWidth="361.0" pickOnBounds="true">
+                                           
+                                          <ImageView fx:id="cam4" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara4" pickOnBounds="true">
                                              <image>
                                                 <Image url="@../../img/P60507-105734.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Button mnemonicParsing="false" prefHeight="123.0" prefWidth="364.0" style="-fx-background-color: transparent;" />
                                        </children></Pane>
                                  </children>
                               </GridPane>
@@ -282,17 +282,17 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <RadioButton mnemonicParsing="false" text="Robô" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                        <RadioButton fx:id="robotCommunication" mnemonicParsing="false" text="Robô" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                            <font>
                               <Font name="Balsamiq Sans" size="18.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton mnemonicParsing="false" text="Equipa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <RadioButton fx:id="teamCommunication" mnemonicParsing="false" text="Equipa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font name="Balsamiq Sans" size="18.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                        <RadioButton fx:id="turnOffCommunication" mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                            <font>
                               <Font name="Balsamiq Sans" size="18.0" />
                            </font>
@@ -418,11 +418,13 @@
                <children>
                   <Pane fx:id="camPane1" GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" GridPane.vgrow="ALWAYS">
                      <children>
+                         
                         <ImageView fx:id="cam1" fitHeight="350.0" fitWidth="876.0" pickOnBounds="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="3" GridPane.vgrow="ALWAYS">
                            <image>
                               <Image url="@../../img/P60507-095804.jpg" />
                            </image>
                         </ImageView>
+                        
                      </children>
                   </Pane>
                   <GridPane prefHeight="39.0" prefWidth="930.0" style="-fx-border-color: black; -fx-background-color: white;">

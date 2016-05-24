@@ -18,6 +18,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -106,6 +108,12 @@ public class HomeController implements Initializable {
     private Text tempoMissao;
     
     private ApresentaTempo apresentaTempo;
+    @FXML
+    private RadioButton robotCommunication;
+    @FXML
+    private RadioButton teamCommunication;
+    @FXML
+    private RadioButton turnOffCommunication;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -120,6 +128,10 @@ public class HomeController implements Initializable {
         cam2.fitHeightProperty().bind(camPane2.heightProperty());
         cam3.fitHeightProperty().bind(camPane3.heightProperty());
         cam4.fitHeightProperty().bind(camPane4.heightProperty());
+        ToggleGroup groupRadio = new ToggleGroup();
+        robotCommunication.setToggleGroup(groupRadio);
+        teamCommunication.setToggleGroup(groupRadio);
+        turnOffCommunication.setToggleGroup(groupRadio);
         circleBaixoGarra.setFill(new ImagePattern(new Image("/img/joystick.png")));
         circleBaixoMov.setFill(new ImagePattern(new Image("/img/joystick.png")));
         joySizeGarras = circleBaixoGarra.getRadius()/2;
@@ -262,6 +274,30 @@ public class HomeController implements Initializable {
     private void libertaControlMovimento(MouseEvent event) {
         ((Circle)(event.getSource())).setTranslateX(orgTranslateX);
         ((Circle)(event.getSource())).setTranslateY(orgTranslateY);
+    }
+
+    @FXML
+    private void alternaCamara2(MouseEvent event) {
+        Image imagemCam2 = ((ImageView) event.getSource()).getImage();
+        Image camAtual = cam1.getImage();
+        cam1.setImage(imagemCam2);
+        cam2.setImage(camAtual);
+    }
+
+    @FXML
+    private void alternaCamara3(MouseEvent event) {
+        Image imagemCam3 = ((ImageView) event.getSource()).getImage();
+        Image camAtual = cam1.getImage();
+        cam1.setImage(imagemCam3);
+        cam3.setImage(camAtual);
+    }
+
+    @FXML
+    private void alternaCamara4(MouseEvent event) {
+        Image imagemCam4 = ((ImageView) event.getSource()).getImage();
+        Image camAtual = cam1.getImage();
+        cam1.setImage(imagemCam4);
+        cam4.setImage(camAtual);
     }
     
 }
