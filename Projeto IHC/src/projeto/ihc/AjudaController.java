@@ -34,13 +34,15 @@ public class AjudaController implements Initializable {
     private Button retorna;
     @FXML
     private Button camaras;
+    
+    private String robot;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        robot = "";
     }    
 
     @FXML
@@ -70,12 +72,16 @@ public class AjudaController implements Initializable {
      /**
      * Este método muda para o ecrã home
      */
-    private void voltarAtras(MouseEvent event) throws IOException 
-            
+    private void voltarAtras(MouseEvent event) throws IOException   
     {    //carrega tudo o que existe no ficheiro xml para puder ser utilizador na transição
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
+        Parent root = (Parent) fxmlLoader.load(); 
         //muda de ecrã, é á cena e muda de ecrã, retorna oara o home
         retorna.getScene().setRoot(root);
+        if (robot.equals("Waterbot")) {
+            HomeController home = fxmlLoader.<HomeController>getController();
+            home.setRobot("Waterbot");
+        }
     }
 
     @FXML
@@ -85,5 +91,9 @@ public class AjudaController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("AjudaCamaras.fxml"));
         //mudança de ecrã, vai á cena e muda de ecra, vai para o ecra onde tem as camaras
          camaras.getScene().setRoot(root);
+    }
+    
+    public void setRobot (String name) {
+        robot = name;
     }
 }

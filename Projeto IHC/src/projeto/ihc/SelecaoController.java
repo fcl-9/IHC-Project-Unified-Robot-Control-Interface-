@@ -53,7 +53,8 @@ public class SelecaoController implements Initializable {
      * This method switches the atual screen to the help screen
      */
     private void helpButtonClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AjudaPrincipal.fxml"));
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("AjudaPrincipal.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
         helpButton.getScene().setRoot(root);
     }
 
@@ -71,7 +72,8 @@ public class SelecaoController implements Initializable {
      * This method switches the atual screen to the settings screen
      */
     private void settingsButtonClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Definicoes.fxml"));
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Definicoes.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
         settingsButton.getScene().setRoot(root);
     }
 
@@ -80,8 +82,11 @@ public class SelecaoController implements Initializable {
      * This method switches the atual screen to the home screen
      */
     private void airButtonClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
+        Parent root = (Parent) fxmlLoader.load(); 
+        HomeController home = fxmlLoader.<HomeController>getController();
         airButton.getScene().setRoot(root);
+        home.setRobot("Airbot");
     }
 
     @FXML
@@ -89,8 +94,11 @@ public class SelecaoController implements Initializable {
      * This method switches the atual screen to the home screen
      */
     private void waterButtonClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
+        Parent root = (Parent) fxmlLoader.load(); 
+        HomeController home = fxmlLoader.<HomeController>getController();
         waterButton.getScene().setRoot(root);
+        home.setRobot("Waterbot");
     }
 
     @FXML
@@ -98,8 +106,13 @@ public class SelecaoController implements Initializable {
      * This method switches the atual screen to the home screen
      */
     private void earthButtonClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+        
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
+        Parent root = (Parent) fxmlLoader.load(); 
+        HomeController home = fxmlLoader.<HomeController>getController();
         earthButton.getScene().setRoot(root);
+        home.setRobot("Earthbot");
     }
+    
     
 }

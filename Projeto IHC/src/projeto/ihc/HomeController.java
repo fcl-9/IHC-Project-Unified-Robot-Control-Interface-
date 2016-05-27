@@ -17,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -138,9 +139,17 @@ public class HomeController implements Initializable {
     @FXML
     private Button recButton;    
     private boolean gravar;
+    private String robot;
+    @FXML
+    private Text profAlt;
+    @FXML
+    private Button plusProf;
+    @FXML
+    private Button minusProf;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        robot = "";
         gravar = false;
         tabPane.getSelectionModel().select(2);
         apresentaTempo = new ApresentaTempo(tempoMissao);
@@ -174,8 +183,12 @@ public class HomeController implements Initializable {
      */
     private void sensorButtonClicked(MouseEvent event) throws IOException {
         apresentaTempo.setRunning(false);
-        Parent root = FXMLLoader.load(getClass().getResource("Sensores.fxml"));
-        sensorButton.getScene().setRoot(root);
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Sensores.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        helpButton.getScene().setRoot(root);
+        SensoresController sens = fxmlLoader.<SensoresController>getController();
+        sens.setRobot(robot);
+        
     }
     
     @FXML
@@ -184,8 +197,11 @@ public class HomeController implements Initializable {
      */
     private void garrasButtonClicked(MouseEvent event) throws IOException {
         apresentaTempo.setRunning(false);
-        Parent root = FXMLLoader.load(getClass().getResource("Garras.fxml"));
-        garrasButton.getScene().setRoot(root);
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Garras.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        helpButton.getScene().setRoot(root);
+        GarrasController garras = fxmlLoader.<GarrasController>getController();
+        garras.setRobot(robot);
     }
     
     @FXML
@@ -193,9 +209,12 @@ public class HomeController implements Initializable {
      * This method switches the atual screen to the help screen
      */
     private void helpButtonClicked(MouseEvent event) throws IOException {
-       apresentaTempo.setRunning(false);
-        Parent root = FXMLLoader.load(getClass().getResource("AjudaPrincipal.fxml"));
+        apresentaTempo.setRunning(false);
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("AjudaPrincipal.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
         helpButton.getScene().setRoot(root);
+        AjudaController ajuda = fxmlLoader.<AjudaController>getController();
+        ajuda.setRobot(robot);
     }
 
     @FXML
@@ -203,7 +222,7 @@ public class HomeController implements Initializable {
      * This method closes the application
      */
     private void powerButtonClicked(MouseEvent event) {
-       apresentaTempo.setRunning(false);
+        apresentaTempo.setRunning(false);
         Stage stage = (Stage) powerButton.getScene().getWindow();
         stage.close();
     }
@@ -213,9 +232,12 @@ public class HomeController implements Initializable {
      * This method switches the atual screen to the settings screen
      */
     private void settingsButtonClicked(MouseEvent event) throws IOException {
-       apresentaTempo.setRunning(false);
-        Parent root = FXMLLoader.load(getClass().getResource("Definicoes.fxml"));
+        apresentaTempo.setRunning(false);
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Definicoes.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
         settingsButton.getScene().setRoot(root);
+        DefinicoesController def = fxmlLoader.<DefinicoesController>getController();
+        def.setRobot(robot);
     }
 
     @FXML
@@ -223,7 +245,7 @@ public class HomeController implements Initializable {
      * This method switches the atual screen to the previous one
      */
     private void backButtonClicked(MouseEvent event) throws IOException {
-       apresentaTempo.setRunning(false);
+        apresentaTempo.setRunning(false);
         Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
         settingsButton.getScene().setRoot(root);
     }
@@ -373,6 +395,31 @@ public class HomeController implements Initializable {
             gravar = false;
         }
         
+    }
+    
+    public void setRobot (String name) {
+        robot = name;
+        if (robot.equals("Waterbot")) {
+            cam1.setImage(new Image("/img/cam 1 water.jpg"));
+            cam2.setImage(new Image("/img/cam 2 water.jpg"));
+            cam3.setImage(new Image("/img/cam 3 water.jpg"));
+            cam4.setImage(new Image("/img/cam 4 water.jpg"));
+            plusProf.setOpacity(100);
+            minusProf.setOpacity(100);
+            profAlt.setOpacity(100);
+            profAlt.setText("Profundidade");
+            
+        }
+        else if (robot.equals("Airbot")){
+            plusProf.setOpacity(100);
+            minusProf.setOpacity(100);
+            profAlt.setText("Altitude");
+        }
+        else {
+            plusProf.setOpacity(0);
+            minusProf.setOpacity(0);
+            profAlt.setOpacity(0);
+        }
     }
     
 }
