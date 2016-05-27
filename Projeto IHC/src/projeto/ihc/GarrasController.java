@@ -44,11 +44,15 @@ public class GarrasController implements Initializable {
     @FXML
     private Button backButton;
     
+    private String robot;
+    
     private void handleButtonAction(ActionEvent event) {
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        robot = "";
+
     }    
     
     @FXML
@@ -83,7 +87,16 @@ public class GarrasController implements Initializable {
      * This method switches the atual screen to the previous one
      */
     private void backButtonClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
+        Parent root = (Parent) fxmlLoader.load(); 
         backButton.getScene().setRoot(root);
+        if (robot.equals("Waterbot")) {
+            HomeController home = fxmlLoader.<HomeController>getController();
+            home.setRobot("Waterbot");
+        }
+    }
+    
+    public void setRobot (String name) {
+        robot = name;
     }
 }
