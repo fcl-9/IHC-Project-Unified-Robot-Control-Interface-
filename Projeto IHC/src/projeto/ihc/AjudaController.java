@@ -32,6 +32,8 @@ public class AjudaController implements Initializable {
     private Button irDefinicoes;
     @FXML
     private Button retorna;
+    @FXML
+    private Button camaras;
 
     /**
      * Initializes the controller class.
@@ -74,5 +76,14 @@ public class AjudaController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
         //muda de ecrã, é á cena e muda de ecrã, retorna oara o home
         retorna.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void IrParaAjudaCamaras(MouseEvent event) throws IOException 
+    {
+        //carrega tudo o que existe no ficheiro xml para puder ser utilizador na transição
+        Parent root = FXMLLoader.load(getClass().getResource("AjudaCamaras.fxml"));
+        //mudança de ecrã, vai á cena e muda de ecra, vai para o ecra onde tem as camaras
+         camaras.getScene().setRoot(root);
     }
 }
