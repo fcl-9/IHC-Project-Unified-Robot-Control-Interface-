@@ -203,11 +203,11 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <RadioButton fx:id="powerOnRobo" mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1">
+                                          <RadioButton fx:id="powerOnRobo" mnemonicParsing="false" onMouseClicked="#ligaRobo" text="Ligar" GridPane.columnIndex="1">
                                              <font>
                                                 <Font name="Balsamiq Sans" size="18.0" />
                                              </font></RadioButton>
-                                          <RadioButton fx:id="powerOffRobo" mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2">
+                                          <RadioButton fx:id="powerOffRobo" mnemonicParsing="false" onMouseClicked="#desligaRobo" text="Desligar" GridPane.columnIndex="2">
                                              <font>
                                                 <Font name="Balsamiq Sans" size="18.0" />
                                              </font></RadioButton>
@@ -227,11 +227,11 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <RadioButton fx:id="lightOn" mnemonicParsing="false" text="Ligar" GridPane.columnIndex="1">
+                                          <RadioButton fx:id="lightOn" mnemonicParsing="false" onMouseClicked="#ligaLuzes" text="Ligar" GridPane.columnIndex="1">
                                              <font>
                                                 <Font name="Balsamiq Sans" size="18.0" />
                                              </font></RadioButton>
-                                          <RadioButton fx:id="lightOff" mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2">
+                                          <RadioButton fx:id="lightOff" mnemonicParsing="false" onMouseClicked="#desligaLuzes" text="Desligar" GridPane.columnIndex="2">
                                              <font>
                                                 <Font name="Balsamiq Sans" size="18.0" />
                                              </font></RadioButton>
@@ -291,17 +291,17 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <RadioButton fx:id="robotCommunication" mnemonicParsing="false" text="Robô" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                        <RadioButton fx:id="robotCommunication" mnemonicParsing="false" onMouseClicked="#comunicaRobo" text="Robô" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                            <font>
                               <Font name="Balsamiq Sans" size="18.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton fx:id="teamCommunication" mnemonicParsing="false" text="Equipa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <RadioButton fx:id="teamCommunication" mnemonicParsing="false" onMouseClicked="#comunicaEquipa" text="Equipa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font name="Balsamiq Sans" size="18.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton fx:id="turnOffCommunication" mnemonicParsing="false" text="Desligar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                        <RadioButton fx:id="turnOffCommunication" mnemonicParsing="false" onMouseClicked="#desligaComunicacao" text="Desligar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                            <font>
                               <Font name="Balsamiq Sans" size="18.0" />
                            </font>
@@ -355,7 +355,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Slider orientation="VERTICAL" GridPane.rowSpan="3" />
+                        <Slider fx:id="velControl" orientation="VERTICAL" GridPane.rowSpan="3" />
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="26.0" style="-fx-background-image: url('/img/speedDown.png'); -fx-background-color: transparent; -fx-background-repeat: no-repeat;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="26.0" style="-fx-background-image: url('/img/speedUp.png'); -fx-background-color: transparent; -fx-background-repeat: no-repeat;" GridPane.columnIndex="1" GridPane.valignment="TOP" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-rotate: 90;" text="Velocidade" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
@@ -375,6 +375,11 @@
                         </AnchorPane>
                      </children>
                   </AnchorPane>
+                  <TextFlow fx:id="notificacoesPan" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextFlow>
                </children>
             </GridPane>
             <GridPane GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
@@ -410,7 +415,7 @@
                         <Font name="Balsamiq Sans" size="18.0" />
                      </font>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0 Km/h" GridPane.columnIndex="3">
+                  <Text fx:id="indicaVelocidade" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Km/h" GridPane.columnIndex="3">
                      <font>
                         <Font name="Balsamiq Sans" size="18.0" />
                      </font>

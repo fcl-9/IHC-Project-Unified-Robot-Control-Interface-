@@ -11,16 +11,21 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 import java.util.TimeZone;
+import javafx.animation.FadeTransition;
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Slider;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.ToggleGroup;
@@ -38,10 +43,14 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
+import javafx.scene.text.TextFlow;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 
 /**
@@ -146,6 +155,12 @@ public class HomeController implements Initializable {
     private Button plusProf;
     @FXML
     private Button minusProf;
+    @FXML
+    private TextFlow notificacoesPan;
+    @FXML
+    private Slider velControl;
+    @FXML
+    private Text indicaVelocidade;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -163,11 +178,19 @@ public class HomeController implements Initializable {
         cam2.fitHeightProperty().bind(camPane2.heightProperty());
         cam3.fitHeightProperty().bind(camPane3.heightProperty());
         cam4.fitHeightProperty().bind(camPane4.heightProperty());
-        ToggleGroup groupRadio = new ToggleGroup();
-        robotCommunication.setToggleGroup(groupRadio);
-        teamCommunication.setToggleGroup(groupRadio);
-        turnOffCommunication.setToggleGroup(groupRadio);
+        ToggleGroup groupComunicacao = new ToggleGroup();
+        ToggleGroup groupOnOff = new ToggleGroup();
+        ToggleGroup groupLuzes = new ToggleGroup();
+        robotCommunication.setToggleGroup(groupComunicacao);
+        teamCommunication.setToggleGroup(groupComunicacao);
+        turnOffCommunication.setToggleGroup(groupComunicacao);
+        powerOnRobo.setToggleGroup(groupOnOff);
+        powerOffRobo.setToggleGroup(groupOnOff);
+        lightOn.setToggleGroup(groupLuzes);
+        lightOff.setToggleGroup(groupLuzes);
         turnOffCommunication.setSelected(true);
+        lightOff.setSelected(true);
+        powerOffRobo.setSelected(true);
         recInfo.setOpacity(0);
         mapButton.setOpacity(0);
         mapButton.setDisable(true);
@@ -175,6 +198,8 @@ public class HomeController implements Initializable {
         circleBaixoMov.setFill(new ImagePattern(new Image("/img/joystick.png")));
         joySizeGarras = circleBaixoGarra.getRadius()/2;
         joySizeMov = circleBaixoMov.getRadius()/2;
+        notificacoesPan.setTextAlignment(TextAlignment.CENTER);
+        indicaVelocidade.textProperty().bind(Bindings.format("%.2f Km/h", velControl.valueProperty()));
     }
     
     @FXML
@@ -420,6 +445,71 @@ public class HomeController implements Initializable {
             minusProf.setOpacity(0);
             profAlt.setOpacity(0);
         }
+    }
+    
+    private FadeTransition createFader(Node node) {
+        FadeTransition fade = new FadeTransition(Duration.seconds(5), node);
+        fade.setFromValue(1);
+        fade.setToValue(0);
+
+        return fade;
+    }
+    
+    /**
+     * This method writes the given notification on the screen
+     */
+    private void escreveNotificacao(Text notificacao) {
+        notificacao.setFont(Font.font("Balsamiq Sans", 18));
+        FadeTransition fader = createFader(notificacao);
+        notificacoesPan.getChildren().add(notificacao);
+        fader.play();
+        fader.setOnFinished(new EventHandler<ActionEvent>() {
+		public void handle(ActionEvent event) {
+			notificacoesPan.getChildren().remove(notificacao);
+		}
+	});
+    }
+
+    @FXML
+    private void ligaRobo(MouseEvent event) {
+        Text notificacao = new Text ("O Robô foi ligado.\n");
+        escreveNotificacao(notificacao);
+    }
+
+    @FXML
+    private void desligaRobo(MouseEvent event) {
+        Text notificacao = new Text ("O Robô foi desligado.\n");
+        escreveNotificacao(notificacao);
+    }
+
+    @FXML
+    private void ligaLuzes(MouseEvent event) {
+        Text notificacao = new Text ("As luzes do robô foram ligadas.\n");
+        escreveNotificacao(notificacao);
+    }
+
+    @FXML
+    private void desligaLuzes(MouseEvent event) {
+        Text notificacao = new Text ("As luzes do robô foram desligadas.\n");
+        escreveNotificacao(notificacao);
+    }
+
+    @FXML
+    private void comunicaEquipa(MouseEvent event) {
+        Text notificacao = new Text ("A comunicação com a equipa foi ativada.\n");
+        escreveNotificacao(notificacao);
+    }
+
+    @FXML
+    private void desligaComunicacao(MouseEvent event) {
+        Text notificacao = new Text ("A comunicação foi desativada.\n");
+        escreveNotificacao(notificacao);
+    }
+
+    @FXML
+    private void comunicaRobo(MouseEvent event) {
+        Text notificacao = new Text ("A comunicação via Robô foi ativada.\n");
+        escreveNotificacao(notificacao);
     }
     
 }

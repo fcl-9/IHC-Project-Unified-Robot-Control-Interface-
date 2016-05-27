@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -11,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="background" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-image: url('/img/2016_Background_Dark_Grey_1322x600.jpg');" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ihc.LoginController">
+<AnchorPane id="AnchorPane" fx:id="background" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-image: url('/img/2016_Background_Dark_Grey_1322x600.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ihc.LoginController">
    <children>
       <GridPane fx:id="mainGrid" layoutY="-1.0" prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -84,7 +89,6 @@
                      </font>
                   </Text>
                   <TextField fx:id="idText" layoutX="58.0" layoutY="82.0" prefHeight="37.0" prefWidth="79.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <TextField fx:id="passText" layoutX="58.0" layoutY="26.0" prefHeight="37.0" prefWidth="332.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                   <Button fx:id="loginButton" layoutX="97.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onLoginClicked" prefHeight="37.0" prefWidth="254.0" style="-fx-background-color: #256b25;" text="Login" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Balsamiq Sans" size="24.0" />
@@ -95,6 +99,7 @@
                         <Image url="@../../img/Logo1.png" />
                      </image>
                   </ImageView>
+                  <PasswordField fx:id="passText" prefHeight="37.0" prefWidth="295.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                </children>
             </GridPane>
          </children>
