@@ -137,7 +137,7 @@
                            <children>
                               <Text fill="#256b25" layoutX="126.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EarthBot" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
-                                    <Font size="36.0" />
+                                    <Font name="Balsamiq Sans" size="36.0" />
                                  </font>
                               </Text>
                               <ImageView fitHeight="328.0" fitWidth="369.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
