@@ -190,21 +190,21 @@ public class LoginController implements Initializable {
         Bounds posPass = passText.localToScreen(passText.getBoundsInLocal());
         Bounds posLogin = loginButton.localToScreen(loginButton.getBoundsInLocal());
         double posExitX = posPower.getMinX();
-        double posExitY = posPower.getMinY() + 1.5*powerButton.getHeight();
+        double posExitY = posPower.getMinY() + 2*powerButton.getHeight();
         
         AnchorPane.setLeftAnchor(leaveHelp,posExitX);
         AnchorPane.setTopAnchor(leaveHelp,posExitY);
         transparentAnchor.getChildren().add(leaveHelp);
         
-        help_PowerButton = new Text(posPower.getMinX() - 2*powerButton.getWidth(),posPower.getMinY() + powerButton.getHeight(),"Toque aqui para sair da aplicação");
+        help_PowerButton = new Text(posPower.getMinX() - 1.5*powerButton.getWidth(),posPower.getMinY() + 1.5*powerButton.getHeight(),"Toque aqui para sair da aplicação");
         help_PowerButton.setFill(Color.WHITE);
         help_ExitHelp = new Text(posExitX - 2*40, posExitY + 1.5*40,"Toque aqui para sair da ajuda");
         help_ExitHelp.setFill(Color.WHITE);
-        help_id = new Text(posID.getMinX() + idText.getWidth(),posID.getMinY(),"1) Introduza o seu nome de utilizador");
+        help_id = new Text(posID.getMinX() + idText.getWidth(),posID.getMinY() + idText.getHeight()/2,"1) Introduza o seu nome de utilizador");
         help_id.setFill(Color.WHITE);
-        help_password = new Text(posPass.getMinX() + passText.getWidth(),posPass.getMinY(),"2) Introduza a sua palavra passe");
+        help_password = new Text(posPass.getMinX() + passText.getWidth(),posPass.getMinY() + passText.getHeight()/2,"2) Introduza a sua palavra passe");
         help_password.setFill(Color.WHITE);
-        help_login = new Text(posLogin.getMinX() + loginButton.getWidth(),posLogin.getMinY(),"3) Toque em login para iniciar sessão");
+        help_login = new Text(posLogin.getMinX() + loginButton.getWidth(),posLogin.getMinY() + loginButton.getHeight()/2,"3) Toque em login para iniciar sessão");
         help_login.setFill(Color.WHITE);  
 
         transparentAnchor.getChildren().add(help_PowerButton);
