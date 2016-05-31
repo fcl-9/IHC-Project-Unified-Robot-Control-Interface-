@@ -1,0 +1,1 @@
+java -jar nome.jar -Dcom.sun.javafx.isEmbedded=true -Dcom.sun.javafx.virtualKeyboard=javafx 
