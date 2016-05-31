@@ -152,7 +152,7 @@ public class LoginController implements Initializable {
         helpBlackLayout.setOpacity(0.6);
         idText.toFront();
         passText.toFront();
-        loginButton.toFront();  
+        loginButton.toFront();
         
         helpUpperBlackLayout = new AnchorPane();
         gridUpperBar.add(helpUpperBlackLayout,0,0,2,1);
@@ -167,7 +167,7 @@ public class LoginController implements Initializable {
         
         //Disable buttons funcionalities
         transparentAnchor = new AnchorPane();
-        mainGrid.add(transparentAnchor, 0, 0,3,4);
+        mainGrid.add(transparentAnchor, 0, 0,gridMainWindow.REMAINING,gridMainWindow.REMAINING);
         
         leaveHelp = new Button();
         leaveHelp.setStyle(
@@ -185,32 +185,34 @@ public class LoginController implements Initializable {
                 leaveHelpButtonFunction();
             }
         });
+        Bounds posPower = powerButton.localToScreen(powerButton.getBoundsInLocal());
+        Bounds posID = idText.localToScreen(leaveHelp.getBoundsInLocal());
+        Bounds posPass = passText.localToScreen(passText.getBoundsInLocal());
+        Bounds posLogin = loginButton.localToScreen(loginButton.getBoundsInLocal());
+        double posExitX = posPower.getMinX();
+        double posExitY = posPower.getMinY() + 1.5*powerButton.getHeight();
         
-        AnchorPane.setLeftAnchor(leaveHelp,1220.0);
-        AnchorPane.setTopAnchor(leaveHelp,100.0);
+        AnchorPane.setLeftAnchor(leaveHelp,posExitX);
+        AnchorPane.setTopAnchor(leaveHelp,posExitY);
         transparentAnchor.getChildren().add(leaveHelp);
-    Bounds posPower = powerButton.localToScreen(powerButton.getBoundsInLocal());
-    Bounds posExit = leaveHelp.localToScreen(leaveHelp.getBoundsInLocal());
-    Bounds posID = idText.localToScreen(leaveHelp.getBoundsInLocal());
-    Bounds posPass = passText.localToScreen(passText.getBoundsInLocal());
-    Bounds posLogin = loginButton.localToScreen(loginButton.getBoundsInLocal());
-    help_PowerButton = new Text(posPower.getMinX() - 2*powerButton.getWidth(),posPower.getMinY() + powerButton.getHeight(),"Toque aqui para sair da aplicação");
-    help_PowerButton.setFill(Color.WHITE);
-    help_ExitHelp = new Text(posExit.getMinX(),posExit.getMinY(),"Toque aqui para sair da ajuda");
-    help_ExitHelp.setFill(Color.WHITE);
-    help_id = new Text(posID.getMinX() + idText.getWidth(),posID.getMinY(),"1) Introduza o seu nome de utilizador");
-    help_id.setFill(Color.WHITE);
-    help_password = new Text(posPass.getMinX() + passText.getWidth(),posPass.getMinY(),"2) Introduza a sua palavra passe");
-    help_password.setFill(Color.WHITE);
-    help_login = new Text(posLogin.getMinX() + loginButton.getWidth(),posLogin.getMinY(),"3) Toque em login para iniciar sessão");
-    help_login.setFill(Color.WHITE);  
         
-    transparentAnchor.getChildren().add(help_PowerButton);
-    transparentAnchor.getChildren().add(help_ExitHelp);
-    transparentAnchor.getChildren().add(help_id);
-    transparentAnchor.getChildren().add(help_password);
-    transparentAnchor.getChildren().add(help_login);
-        
+        help_PowerButton = new Text(posPower.getMinX() - 2*powerButton.getWidth(),posPower.getMinY() + powerButton.getHeight(),"Toque aqui para sair da aplicação");
+        help_PowerButton.setFill(Color.WHITE);
+        help_ExitHelp = new Text(posExitX - 2*40, posExitY + 1.5*40,"Toque aqui para sair da ajuda");
+        help_ExitHelp.setFill(Color.WHITE);
+        help_id = new Text(posID.getMinX() + idText.getWidth(),posID.getMinY(),"1) Introduza o seu nome de utilizador");
+        help_id.setFill(Color.WHITE);
+        help_password = new Text(posPass.getMinX() + passText.getWidth(),posPass.getMinY(),"2) Introduza a sua palavra passe");
+        help_password.setFill(Color.WHITE);
+        help_login = new Text(posLogin.getMinX() + loginButton.getWidth(),posLogin.getMinY(),"3) Toque em login para iniciar sessão");
+        help_login.setFill(Color.WHITE);  
+
+        transparentAnchor.getChildren().add(help_PowerButton);
+        transparentAnchor.getChildren().add(help_ExitHelp);
+        transparentAnchor.getChildren().add(help_id);
+        transparentAnchor.getChildren().add(help_password);
+        transparentAnchor.getChildren().add(help_login);
+
     }
     
     private void leaveHelpButtonFunction(){
