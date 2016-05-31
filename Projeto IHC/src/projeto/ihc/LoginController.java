@@ -13,6 +13,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Bounds;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -188,16 +189,20 @@ public class LoginController implements Initializable {
         AnchorPane.setLeftAnchor(leaveHelp,1220.0);
         AnchorPane.setTopAnchor(leaveHelp,100.0);
         transparentAnchor.getChildren().add(leaveHelp);
-        
-    help_PowerButton = new Text(1100,80,"Toque aqui para sair da aplicação");
+    Bounds posPower = powerButton.localToScreen(powerButton.getBoundsInLocal());
+    Bounds posExit = leaveHelp.localToScreen(leaveHelp.getBoundsInLocal());
+    Bounds posID = idText.localToScreen(leaveHelp.getBoundsInLocal());
+    Bounds posPass = passText.localToScreen(passText.getBoundsInLocal());
+    Bounds posLogin = loginButton.localToScreen(loginButton.getBoundsInLocal());
+    help_PowerButton = new Text(posPower.getMinX() - 2*powerButton.getWidth(),posPower.getMinY() + powerButton.getHeight(),"Toque aqui para sair da aplicação");
     help_PowerButton.setFill(Color.WHITE);
-    help_ExitHelp = new Text(1110,160,"Toque aqui para sair da ajuda");
+    help_ExitHelp = new Text(posExit.getMinX(),posExit.getMinY(),"Toque aqui para sair da ajuda");
     help_ExitHelp.setFill(Color.WHITE);
-    help_id = new Text(950,505,"1) Introduza o seu nome de utilizador");
+    help_id = new Text(posID.getMinX() + idText.getWidth(),posID.getMinY(),"1) Introduza o seu nome de utilizador");
     help_id.setFill(Color.WHITE);
-    help_password = new Text(950,590,"2) Introduza a sua palavra passe");
+    help_password = new Text(posPass.getMinX() + passText.getWidth(),posPass.getMinY(),"2) Introduza a sua palavra passe");
     help_password.setFill(Color.WHITE);
-    help_login = new Text(775,655,"3) Toque em login para iniciar sessão");
+    help_login = new Text(posLogin.getMinX() + loginButton.getWidth(),posLogin.getMinY(),"3) Toque em login para iniciar sessão");
     help_login.setFill(Color.WHITE);  
         
     transparentAnchor.getChildren().add(help_PowerButton);

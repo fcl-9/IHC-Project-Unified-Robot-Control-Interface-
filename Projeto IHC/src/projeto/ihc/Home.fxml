@@ -318,7 +318,7 @@
                         <Circle fx:id="circleBaixoGarra" fill="DODGERBLUE" layoutX="103.0" layoutY="100.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                         <AnchorPane fx:id="paneGarraControl" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Circle fx:id="controlGarra" fill="#256b25" layoutX="100.0" layoutY="100.0" onMouseDragged="#controlaGarra" onMousePressed="#tocaControlGarra" onMouseReleased="#libertaControlGarra" radius="50.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                              <Circle fx:id="controlGarra" fill="#256b25" layoutX="100.0" layoutY="100.0" onMouseDragged="#controlaGarra" onMousePressed="#tocaControlGarra" onMouseReleased="#libertaControlGarra" radius="50.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: url('/img/garra.png');" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -370,7 +370,7 @@
                         <Circle fx:id="circleBaixoMov" fill="DODGERBLUE" layoutX="103.0" layoutY="100.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                         <AnchorPane fx:id="paneMovControl" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Circle fx:id="controlMov" fill="#256b25" layoutX="100.0" layoutY="100.0" onMouseDragged="#controlaMovimento" onMousePressed="#tocaControlMovimento" onMouseReleased="#libertaControlMovimento" radius="50.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                              <Circle fx:id="controlMov" fill="#256b25" layoutX="100.0" layoutY="100.0" onMouseDragged="#controlaMovimento" onMousePressed="#tocaControlMovimento" onMouseReleased="#libertaControlMovimento" radius="50.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: url('img/four-arrows.png');" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
                            </children>
                         </AnchorPane>
                      </children>
