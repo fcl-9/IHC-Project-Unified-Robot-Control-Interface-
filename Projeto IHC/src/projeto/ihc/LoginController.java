@@ -84,7 +84,8 @@ public class LoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        idText.getProperties().put("vkType", "text");
+        passText.getProperties().put("vkType", "text");
     }    
 
     @FXML
