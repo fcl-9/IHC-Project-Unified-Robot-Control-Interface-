@@ -91,7 +91,7 @@
                   <TextField fx:id="idText" layoutX="58.0" layoutY="82.0" prefHeight="37.0" prefWidth="79.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <Button fx:id="loginButton" layoutX="97.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onLoginClicked" prefHeight="37.0" prefWidth="254.0" style="-fx-background-color: #256b25;" text="Login" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                      <font>
-                        <Font name="Balsamiq Sans" size="36.0" />
+                        <Font name="Balsamiq Sans" size="29.0" />
                      </font>
                   </Button>
                   <ImageView fitHeight="325.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
