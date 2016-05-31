@@ -19,6 +19,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
@@ -57,7 +58,7 @@ public class LoginController implements Initializable {
     @FXML
     private TextField idText;
     @FXML
-    private TextField passText;
+    private PasswordField passText;
     @FXML
     private GridPane gridUpperBar;
     private GridPane gridButton;
@@ -83,6 +84,7 @@ public class LoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
     }    
 
     @FXML
