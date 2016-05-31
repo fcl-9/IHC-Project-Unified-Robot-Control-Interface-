@@ -403,6 +403,8 @@ public class HomeController implements Initializable {
     @FXML
     private void mapTabClicked(Event event) {
         idEcra.setText("Mapa");
+        mapButton.setOpacity(0);
+        mapButton.setDisable(true);
     }
 
     @FXML
