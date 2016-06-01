@@ -178,6 +178,10 @@ public class HomeController implements Initializable {
         cam2.fitHeightProperty().bind(camPane2.heightProperty());
         cam3.fitHeightProperty().bind(camPane3.heightProperty());
         cam4.fitHeightProperty().bind(camPane4.heightProperty());
+        cam1.setOpacity(0);
+        cam2.setOpacity(0);
+        cam3.setOpacity(0);
+        cam4.setOpacity(0);
         ToggleGroup groupComunicacao = new ToggleGroup();
         ToggleGroup groupOnOff = new ToggleGroup();
         ToggleGroup groupLuzes = new ToggleGroup();
@@ -474,12 +478,20 @@ public class HomeController implements Initializable {
 
     @FXML
     private void ligaRobo(MouseEvent event) {
+        cam1.setOpacity(100);
+        cam2.setOpacity(100);
+        cam3.setOpacity(100);
+        cam4.setOpacity(100);
         Text notificacao = new Text ("O Robô foi ligado.\n");
         escreveNotificacao(notificacao);
     }
 
     @FXML
     private void desligaRobo(MouseEvent event) {
+        cam1.setOpacity(0);
+        cam2.setOpacity(0);
+        cam3.setOpacity(0);
+        cam4.setOpacity(0);
         Text notificacao = new Text ("O Robô foi desligado.\n");
         escreveNotificacao(notificacao);
     }
