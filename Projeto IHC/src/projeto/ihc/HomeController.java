@@ -151,9 +151,7 @@ public class HomeController implements Initializable {
     private String robot;
     @FXML
     private Text profAlt;
-    @FXML
     private Button plusProf;
-    @FXML
     private Button minusProf;
     @FXML
     private TextFlow notificacoesPan;
@@ -161,6 +159,8 @@ public class HomeController implements Initializable {
     private Slider velControl;
     @FXML
     private Text indicaVelocidade;
+    @FXML
+    private Slider profAltSlide;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -178,10 +178,6 @@ public class HomeController implements Initializable {
         cam2.fitHeightProperty().bind(camPane2.heightProperty());
         cam3.fitHeightProperty().bind(camPane3.heightProperty());
         cam4.fitHeightProperty().bind(camPane4.heightProperty());
-        cam1.setOpacity(0);
-        cam2.setOpacity(0);
-        cam3.setOpacity(0);
-        cam4.setOpacity(0);
         ToggleGroup groupComunicacao = new ToggleGroup();
         ToggleGroup groupOnOff = new ToggleGroup();
         ToggleGroup groupLuzes = new ToggleGroup();
@@ -194,7 +190,7 @@ public class HomeController implements Initializable {
         lightOff.setToggleGroup(groupLuzes);
         turnOffCommunication.setSelected(true);
         lightOff.setSelected(true);
-        powerOffRobo.setSelected(true);
+        powerOnRobo.setSelected(true);
         recInfo.setOpacity(0);
         mapButton.setOpacity(0);
         mapButton.setDisable(true);
@@ -435,20 +431,17 @@ public class HomeController implements Initializable {
             cam2.setImage(new Image("/img/cam 2 water.jpg"));
             cam3.setImage(new Image("/img/cam 3 water.jpg"));
             cam4.setImage(new Image("/img/cam 4 water.jpg"));
-            plusProf.setOpacity(100);
-            minusProf.setOpacity(100);
+            profAltSlide.setOpacity(100);
             profAlt.setOpacity(100);
             profAlt.setText("Profundidade");
             
         }
         else if (robot.equals("Airbot")){
-            plusProf.setOpacity(100);
-            minusProf.setOpacity(100);
+            profAltSlide.setOpacity(100);
             profAlt.setText("Altitude");
         }
         else {
-            plusProf.setOpacity(0);
-            minusProf.setOpacity(0);
+            profAltSlide.setOpacity(0);
             profAlt.setOpacity(0);
         }
     }
@@ -464,7 +457,7 @@ public class HomeController implements Initializable {
     /**
      * This method writes the given notification on the screen
      */
-    private void escreveNotificacao(Text notificacao) {
+    public void escreveNotificacao(Text notificacao) {
         notificacao.setFont(Font.font("Balsamiq Sans", 18));
         FadeTransition fader = createFader(notificacao);
         notificacoesPan.getChildren().add(notificacao);

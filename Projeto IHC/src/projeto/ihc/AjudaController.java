@@ -78,9 +78,16 @@ public class AjudaController implements Initializable {
         Parent root = (Parent) fxmlLoader.load(); 
         //muda de ecrã, é á cena e muda de ecrã, retorna oara o home
         retorna.getScene().setRoot(root);
+        HomeController home = fxmlLoader.<HomeController>getController();
         if (robot.equals("Waterbot")) {
-            HomeController home = fxmlLoader.<HomeController>getController();
+            
             home.setRobot("Waterbot");
+        }
+        else if (robot.equals("Airbot")) {
+            home.setRobot("Airbot");
+        }
+        else {
+            home.setRobot("EarthBot");
         }
     }
 

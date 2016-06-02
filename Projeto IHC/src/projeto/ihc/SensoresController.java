@@ -89,9 +89,15 @@ public class SensoresController implements Initializable {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
         Parent root = (Parent) fxmlLoader.load(); 
         backButton.getScene().setRoot(root);
-        if (robot.equals("Waterbot")) {
-            HomeController home = fxmlLoader.<HomeController>getController();
+        HomeController home = fxmlLoader.<HomeController>getController();
+        if (robot.equals("Waterbot")) {    
             home.setRobot("Waterbot");
+        }
+        else if (robot.equals("Airbot")) {
+            home.setRobot("Airbot");
+        }
+        else {
+            home.setRobot("EarthBot");
         }
     }
     

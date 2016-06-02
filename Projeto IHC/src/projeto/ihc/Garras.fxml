@@ -155,7 +155,7 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <HBox fx:id="pos1" alignment="CENTER" onMouseClicked="#posicao1" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
                         <ImageView fitHeight="217.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
                            <image>

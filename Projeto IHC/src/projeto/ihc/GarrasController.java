@@ -23,6 +23,8 @@ import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -45,6 +47,8 @@ public class GarrasController implements Initializable {
     private Button backButton;
     
     private String robot;
+    @FXML
+    private HBox pos1;
     
     private void handleButtonAction(ActionEvent event) {
     }
@@ -90,13 +94,40 @@ public class GarrasController implements Initializable {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
         Parent root = (Parent) fxmlLoader.load(); 
         backButton.getScene().setRoot(root);
+        HomeController home = fxmlLoader.<HomeController>getController();
         if (robot.equals("Waterbot")) {
-            HomeController home = fxmlLoader.<HomeController>getController();
+            
             home.setRobot("Waterbot");
+        }
+        else if (robot.equals("Airbot")) {
+            home.setRobot("Airbot");
+        }
+        else {
+            home.setRobot("EarthBot");
         }
     }
     
     public void setRobot (String name) {
         robot = name;
+    }
+
+    @FXML
+    private void posicao1(MouseEvent event) throws IOException {
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
+        Parent root = (Parent) fxmlLoader.load(); 
+        backButton.getScene().setRoot(root);
+        HomeController home = fxmlLoader.<HomeController>getController();
+        if (robot.equals("Waterbot")) {
+           
+            home.setRobot("Waterbot");
+        }
+        else if (robot.equals("Airbot")) {
+            home.setRobot("Airbot");
+        }
+        else {
+            home.setRobot("EarthBot");
+        }
+        Text notificacao = new Text ("A garra assumiu a posição 1.\n");
+        home.escreveNotificacao(notificacao);
     }
 }
