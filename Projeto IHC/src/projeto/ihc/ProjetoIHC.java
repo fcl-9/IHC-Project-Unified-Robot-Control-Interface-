@@ -28,7 +28,7 @@ public class ProjetoIHC extends Application {
         
         stage.setScene(scene);
         stage.show();
-        stage.setFullScreen(true);
+        //stage.setFullScreen(true);
     }
 
     /**

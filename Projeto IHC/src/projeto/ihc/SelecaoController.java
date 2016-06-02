@@ -52,9 +52,10 @@ public class SelecaoController implements Initializable {
     /**
      * This method switches the atual screen to the help screen
      */
-    private void helpButtonClicked(MouseEvent event) throws IOException {
+    private void helpButtonClicked(MouseEvent event) throws IOException {background.getChildren().clear();
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("AjudaPrincipal.fxml"));
         Parent root = (Parent) fxmlLoader.load();
+        background.getChildren().clear();
         helpButton.getScene().setRoot(root);
     }
 
@@ -74,6 +75,7 @@ public class SelecaoController implements Initializable {
     private void settingsButtonClicked(MouseEvent event) throws IOException {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Definicoes.fxml"));
         Parent root = (Parent) fxmlLoader.load();
+        background.getChildren().clear();
         settingsButton.getScene().setRoot(root);
     }
 
@@ -86,6 +88,7 @@ public class SelecaoController implements Initializable {
         Parent root = (Parent) fxmlLoader.load(); 
         HomeController home = fxmlLoader.<HomeController>getController();
         airButton.getScene().setRoot(root);
+        background.getChildren().clear();
         home.setRobot("Airbot");
     }
 
@@ -98,6 +101,7 @@ public class SelecaoController implements Initializable {
         Parent root = (Parent) fxmlLoader.load(); 
         HomeController home = fxmlLoader.<HomeController>getController();
         waterButton.getScene().setRoot(root);
+        background.getChildren().clear();
         home.setRobot("Waterbot");
     }
 
@@ -106,11 +110,11 @@ public class SelecaoController implements Initializable {
      * This method switches the atual screen to the home screen
      */
     private void earthButtonClicked(MouseEvent event) throws IOException {
-        
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
         Parent root = (Parent) fxmlLoader.load(); 
         HomeController home = fxmlLoader.<HomeController>getController();
         earthButton.getScene().setRoot(root);
+        background.getChildren().clear();
         home.setRobot("Earthbot");
     }
     

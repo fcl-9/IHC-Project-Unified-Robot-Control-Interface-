@@ -59,6 +59,7 @@ public class DefinicoesController implements Initializable {
     private void helpButtonClicked(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("AjudaPrincipal.fxml"));
         helpButton.getScene().setRoot(root);
+        background.getChildren().clear();
     }
 
     @FXML
@@ -78,6 +79,7 @@ public class DefinicoesController implements Initializable {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
         Parent root = (Parent) fxmlLoader.load(); 
         backButton.getScene().setRoot(root);
+        background.getChildren().clear();
         if (robot.equals("Waterbot")) {
             HomeController home = fxmlLoader.<HomeController>getController();
             home.setRobot("Waterbot");

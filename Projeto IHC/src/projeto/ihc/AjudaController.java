@@ -65,7 +65,8 @@ public class AjudaController implements Initializable {
         //carrega tudo o que existe no ficheiro xml para puder ser utilizador na transição
         Parent root = FXMLLoader.load(getClass().getResource("Definicoes.fxml"));
         //mudança de ecrã, vai á cena e muda de ecra, vai para o ecra definicoes
-         irDefinicoes.getScene().setRoot(root);
+        irDefinicoes.getScene().setRoot(root); 
+        background.getChildren().clear();
     }
 
     @FXML
@@ -78,6 +79,7 @@ public class AjudaController implements Initializable {
         Parent root = (Parent) fxmlLoader.load(); 
         //muda de ecrã, é á cena e muda de ecrã, retorna oara o home
         retorna.getScene().setRoot(root);
+        background.getChildren().clear();
         HomeController home = fxmlLoader.<HomeController>getController();
         if (robot.equals("Waterbot")) {
             
@@ -89,6 +91,7 @@ public class AjudaController implements Initializable {
         else {
             home.setRobot("EarthBot");
         }
+        
     }
 
     @FXML
@@ -98,6 +101,8 @@ public class AjudaController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("AjudaCamaras.fxml"));
         //mudança de ecrã, vai á cena e muda de ecra, vai para o ecra onde tem as camaras
          camaras.getScene().setRoot(root);
+        background.getChildren().clear();
+         
     }
     
     public void setRobot (String name) {

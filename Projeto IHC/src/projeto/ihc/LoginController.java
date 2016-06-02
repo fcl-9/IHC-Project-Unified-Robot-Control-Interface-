@@ -124,6 +124,7 @@ public class LoginController implements Initializable {
         contaTempo.start();
         Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
         loginButton.getScene().setRoot(root);
+        background.getChildren().clear();
         }
     }
 

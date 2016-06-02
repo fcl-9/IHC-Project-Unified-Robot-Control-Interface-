@@ -66,6 +66,7 @@ public class GarrasController implements Initializable {
     private void helpButtonClicked(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("AjudaPrincipal.fxml"));
         helpButton.getScene().setRoot(root);
+        background.getChildren().clear();
     }
 
     @FXML
@@ -84,6 +85,7 @@ public class GarrasController implements Initializable {
     private void settingsButtonClicked(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Definicoes.fxml"));
         settingsButton.getScene().setRoot(root);
+        background.getChildren().clear();
     }
 
     @FXML
@@ -105,6 +107,7 @@ public class GarrasController implements Initializable {
         else {
             home.setRobot("EarthBot");
         }
+        background.getChildren().clear();
     }
     
     public void setRobot (String name) {
@@ -116,6 +119,7 @@ public class GarrasController implements Initializable {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
         Parent root = (Parent) fxmlLoader.load(); 
         backButton.getScene().setRoot(root);
+        background.getChildren().clear();
         HomeController home = fxmlLoader.<HomeController>getController();
         if (robot.equals("Waterbot")) {
            

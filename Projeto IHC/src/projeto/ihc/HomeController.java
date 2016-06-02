@@ -211,6 +211,7 @@ public class HomeController implements Initializable {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Sensores.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         helpButton.getScene().setRoot(root);
+        background.getChildren().clear();
         SensoresController sens = fxmlLoader.<SensoresController>getController();
         sens.setRobot(robot);
         
@@ -225,6 +226,7 @@ public class HomeController implements Initializable {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Garras.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         helpButton.getScene().setRoot(root);
+        background.getChildren().clear();
         GarrasController garras = fxmlLoader.<GarrasController>getController();
         garras.setRobot(robot);
     }
@@ -238,6 +240,7 @@ public class HomeController implements Initializable {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("AjudaPrincipal.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         helpButton.getScene().setRoot(root);
+        background.getChildren().clear();
         AjudaController ajuda = fxmlLoader.<AjudaController>getController();
         ajuda.setRobot(robot);
     }
@@ -261,6 +264,7 @@ public class HomeController implements Initializable {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Definicoes.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         settingsButton.getScene().setRoot(root);
+        background.getChildren().clear();
         DefinicoesController def = fxmlLoader.<DefinicoesController>getController();
         def.setRobot(robot);
     }
@@ -273,6 +277,7 @@ public class HomeController implements Initializable {
         apresentaTempo.setRunning(false);
         Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
         settingsButton.getScene().setRoot(root);
+        background.getChildren().clear();
     }
 
     @FXML
