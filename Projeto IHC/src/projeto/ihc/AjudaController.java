@@ -91,6 +91,9 @@ public class AjudaController implements Initializable {
     }
     
     @FXML
+    /**
+     * Permite ao utilizador ir para o ecrã de ajuda das câmaras.
+     */
     private void IrParaAjudaCamaras(MouseEvent event) throws IOException 
     {
         //carrega tudo o que existe no ficheiro xml para puder ser utilizador na transição
