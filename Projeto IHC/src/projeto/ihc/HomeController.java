@@ -9,6 +9,7 @@ import java.awt.Point;
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.TimeZone;
 import javafx.animation.FadeTransition;
@@ -22,7 +23,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Slider;
@@ -50,6 +53,7 @@ import javafx.scene.text.TextFlow;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 
@@ -162,8 +166,11 @@ public class HomeController implements Initializable {
     @FXML
     private Slider profAltSlide;
     
+    private CommonButtons comBtn;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        comBtn = new CommonButtons();
         robot = "";
         gravar = false;
         tabPane.getSelectionModel().select(2);
@@ -237,12 +244,7 @@ public class HomeController implements Initializable {
      */
     private void helpButtonClicked(MouseEvent event) throws IOException {
         apresentaTempo.setRunning(false);
-        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("AjudaPrincipal.fxml"));
-        Parent root = (Parent) fxmlLoader.load();
-        helpButton.getScene().setRoot(root);
-        background.getChildren().clear();
-        AjudaController ajuda = fxmlLoader.<AjudaController>getController();
-        ajuda.setRobot(robot);
+        comBtn.askHelp(helpButton, background, robot);
     }
 
     @FXML
@@ -251,8 +253,7 @@ public class HomeController implements Initializable {
      */
     private void powerButtonClicked(MouseEvent event) {
         apresentaTempo.setRunning(false);
-        Stage stage = (Stage) powerButton.getScene().getWindow();
-        stage.close();
+        comBtn.closeApp(powerButton);
     }
 
     @FXML
@@ -261,12 +262,7 @@ public class HomeController implements Initializable {
      */
     private void settingsButtonClicked(MouseEvent event) throws IOException {
         apresentaTempo.setRunning(false);
-        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Definicoes.fxml"));
-        Parent root = (Parent) fxmlLoader.load();
-        settingsButton.getScene().setRoot(root);
-        background.getChildren().clear();
-        DefinicoesController def = fxmlLoader.<DefinicoesController>getController();
-        def.setRobot(robot);
+        comBtn.goToSettings(settingsButton, background, robot);
     }
 
     @FXML
@@ -275,9 +271,28 @@ public class HomeController implements Initializable {
      */
     private void backButtonClicked(MouseEvent event) throws IOException {
         apresentaTempo.setRunning(false);
-        Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
-        settingsButton.getScene().setRoot(root);
-        background.getChildren().clear();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.initStyle(StageStyle.UNDECORATED);
+        alert.initOwner(backButton.getScene().getWindow());
+        alert.setHeaderText("Está prestes a voltar ao ecrã de Seleção de Robôs.\nO estado atual não será guardado.");
+        alert.setContentText("Deseja Continuar?");
+        
+        Button okButton = (Button) alert.getDialogPane().lookupButton( ButtonType.OK );
+        okButton.setText("Sim");
+        Button noButton = (Button) alert.getDialogPane().lookupButton( ButtonType.CANCEL );
+        noButton.setText("Não");  
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            // ... user chose OK
+            alert.close();
+            Parent root = FXMLLoader.load(getClass().getResource("Selecao.fxml"));
+            settingsButton.getScene().setRoot(root);
+            background.getChildren().clear();
+        } else {
+            // ... user chose CANCEL or closed the dialog
+            alert.close();
+        }
     }
 
     @FXML

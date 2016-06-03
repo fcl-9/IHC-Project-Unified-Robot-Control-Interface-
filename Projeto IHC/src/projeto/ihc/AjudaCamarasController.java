@@ -15,7 +15,6 @@ import javafx.fxml.Initializable;
  * @author AnaIsabel
  */
 public class AjudaCamarasController implements Initializable {
-
     /**
      * Initializes the controller class.
      */

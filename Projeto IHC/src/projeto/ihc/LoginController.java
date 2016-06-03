@@ -7,6 +7,7 @@ package projeto.ihc;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -19,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -32,9 +34,13 @@ import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.stage.Window;
 
 
 /**
@@ -78,6 +84,8 @@ public class LoginController implements Initializable {
     private Text help_password;
     private Text help_login;
     
+    private CommonButtons comBtn;
+    
     
     
     private void handleButtonAction(ActionEvent event) {
@@ -85,6 +93,7 @@ public class LoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        comBtn = new CommonButtons();
         idText.getProperties().put("vkType", "text");
         passText.getProperties().put("vkType", "text");
     }    
@@ -136,8 +145,7 @@ public class LoginController implements Initializable {
      * powerButton
      */
     private void powerButtonHandle(MouseEvent event) {
-        Stage stage = (Stage) powerButton.getScene().getWindow();
-        stage.close();
+        comBtn.closeApp(powerButton);
     }
 
     @FXML

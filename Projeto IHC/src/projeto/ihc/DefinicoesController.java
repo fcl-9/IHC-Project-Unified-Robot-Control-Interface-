@@ -44,12 +44,15 @@ public class DefinicoesController implements Initializable {
     
     private String robot;
     
+    private CommonButtons comBtn;
+    
     private void handleButtonAction(ActionEvent event) {
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         robot = "";
+        comBtn = new CommonButtons();
     }  
     
     @FXML
@@ -57,9 +60,7 @@ public class DefinicoesController implements Initializable {
      * This method switches the atual screen to the help screen
      */
     private void helpButtonClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AjudaPrincipal.fxml"));
-        helpButton.getScene().setRoot(root);
-        background.getChildren().clear();
+        comBtn.askHelp(helpButton, background, robot);
     }
 
     @FXML
@@ -67,8 +68,7 @@ public class DefinicoesController implements Initializable {
      * This method closes the application
      */
     private void powerButtonClicked(MouseEvent event) {
-        Stage stage = (Stage) powerButton.getScene().getWindow();
-        stage.close();
+        comBtn.closeApp(powerButton);
     }
 
     @FXML

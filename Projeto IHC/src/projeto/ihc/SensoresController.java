@@ -46,11 +46,14 @@ public class SensoresController implements Initializable {
     
     private String robot;
     
+    private CommonButtons comBtn;
+    
     private void handleButtonAction(ActionEvent event) {
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        comBtn = new CommonButtons();
         robot = "";
     }    
     
@@ -69,8 +72,7 @@ public class SensoresController implements Initializable {
      * This method closes the application
      */
     private void powerButtonClicked(MouseEvent event) {
-        Stage stage = (Stage) powerButton.getScene().getWindow();
-        stage.close();
+        comBtn.closeApp(powerButton);
     }
 
     @FXML
@@ -78,9 +80,7 @@ public class SensoresController implements Initializable {
      * This method switches the atual screen to the settings screen
      */
     private void settingsButtonClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Definicoes.fxml"));
-        settingsButton.getScene().setRoot(root);
-        background.getChildren().clear();
+        comBtn.goToSettings(settingsButton, background, robot);
     }
 
     @FXML

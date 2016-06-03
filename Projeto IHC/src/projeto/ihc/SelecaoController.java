@@ -39,12 +39,15 @@ public class SelecaoController implements Initializable {
     private Button waterButton;
     @FXML
     private Button earthButton;
+    
+    private CommonButtons comBtn;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        comBtn = new CommonButtons();
         // TODO
     }    
 
@@ -52,11 +55,11 @@ public class SelecaoController implements Initializable {
     /**
      * This method switches the atual screen to the help screen
      */
-    private void helpButtonClicked(MouseEvent event) throws IOException {background.getChildren().clear();
+    private void helpButtonClicked(MouseEvent event) throws IOException {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("AjudaPrincipal.fxml"));
         Parent root = (Parent) fxmlLoader.load();
-        background.getChildren().clear();
         helpButton.getScene().setRoot(root);
+        background.getChildren().clear();
     }
 
     @FXML
@@ -64,8 +67,7 @@ public class SelecaoController implements Initializable {
      * This method closes the application
      */
     private void powerButtonClicked(MouseEvent event) {
-        Stage stage = (Stage) powerButton.getScene().getWindow();
-        stage.close();
+        comBtn.closeApp(powerButton);
     }
 
     @FXML
@@ -75,8 +77,8 @@ public class SelecaoController implements Initializable {
     private void settingsButtonClicked(MouseEvent event) throws IOException {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Definicoes.fxml"));
         Parent root = (Parent) fxmlLoader.load();
-        background.getChildren().clear();
         settingsButton.getScene().setRoot(root);
+        background.getChildren().clear();
     }
 
     @FXML

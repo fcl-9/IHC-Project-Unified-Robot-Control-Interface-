@@ -36,12 +36,15 @@ public class AjudaController implements Initializable {
     private Button camaras;
     
     private String robot;
+    
+    private CommonButtons comBtn;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        comBtn = new CommonButtons();
         robot = "";
     }    
 
@@ -49,24 +52,17 @@ public class AjudaController implements Initializable {
     /**
      * Este método fecha a interface
      */
-    private void sairInterface(MouseEvent event) 
-    {
-        //stage é a janela, no botao vamos buscar a cena e a janela, para depois puder fechar
-        Stage stage = (Stage) sair.getScene().getWindow();
-        stage.close();
+    private void sairInterface(MouseEvent event) {
+        comBtn.closeApp(sair);
     }
 
     @FXML
     /**
      * Este método muda para o ecrã das definições
      */
-    private void IrParaDefinicoes(MouseEvent event) throws IOException 
-    {
-        //carrega tudo o que existe no ficheiro xml para puder ser utilizador na transição
-        Parent root = FXMLLoader.load(getClass().getResource("Definicoes.fxml"));
-        //mudança de ecrã, vai á cena e muda de ecra, vai para o ecra definicoes
-        irDefinicoes.getScene().setRoot(root); 
-        background.getChildren().clear();
+    private void IrParaDefinicoes(MouseEvent event) throws IOException {
+        comBtn.goToSettings(irDefinicoes, background, robot);
+        
     }
 
     @FXML
@@ -93,14 +89,15 @@ public class AjudaController implements Initializable {
         }
         
     }
-
+    
     @FXML
     private void IrParaAjudaCamaras(MouseEvent event) throws IOException 
     {
         //carrega tudo o que existe no ficheiro xml para puder ser utilizador na transição
-        Parent root = FXMLLoader.load(getClass().getResource("AjudaCamaras.fxml"));
+        FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("AjudaCamaras.fxml"));
+        Parent root = (Parent) fxmlLoader.load(); 
         //mudança de ecrã, vai á cena e muda de ecra, vai para o ecra onde tem as camaras
-         camaras.getScene().setRoot(root);
+        camaras.getScene().setRoot(root);
         background.getChildren().clear();
          
     }
