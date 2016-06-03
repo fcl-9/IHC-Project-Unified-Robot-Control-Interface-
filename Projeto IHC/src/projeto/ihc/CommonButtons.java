@@ -19,9 +19,16 @@ import javafx.stage.StageStyle;
 /**
  *
  * @author vmcba
+ * This class has all the methods that are used by he buttons who are present in all the interfaces 
+ * and those button are the Exit, Help and definitions button
  */
 public class CommonButtons {
+    /**
+     * This will make the app send and advice to the user saying that he will be leaving the application.
+     * @param btn 
+     */
     public void closeApp (Button btn) {
+        //sets the alert box on 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initStyle(StageStyle.UNDECORATED);
         alert.initOwner(btn.getScene().getWindow());
@@ -45,7 +52,13 @@ public class CommonButtons {
             alert.close();
         }
     }
-    
+    /**
+     * This will make the interface change when the help button is clicked
+     * @param btn
+     * @param background
+     * @param robot
+     * @throws IOException 
+     */
     public void askHelp(Button btn, AnchorPane background, String robot) throws IOException{
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("AjudaPrincipal.fxml"));
         Parent root = (Parent) fxmlLoader.load();
@@ -55,6 +68,13 @@ public class CommonButtons {
         ajuda.setRobot(robot);
     }
     
+    /**
+     * This will make the interface change when we touch in the setting buttons
+     * @param btn
+     * @param background
+     * @param robot
+     * @throws IOException 
+     */
     public void goToSettings (Button btn, AnchorPane background, String robot) throws IOException {
         FXMLLoader  fxmlLoader = new FXMLLoader(getClass().getResource("Definicoes.fxml"));
         Parent root = (Parent) fxmlLoader.load();
