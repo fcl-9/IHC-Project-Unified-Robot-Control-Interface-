@@ -173,8 +173,11 @@ public class HomeController implements Initializable {
     
     private CommonButtons comBtn;
     
+    private boolean pilotoAutomatico;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        pilotoAutomatico = false;
         comBtn = new CommonButtons();
         robot = "";
         gravar = false;
@@ -409,6 +412,7 @@ public class HomeController implements Initializable {
         mapButton.setDisable(false);
         idEcra.setText("Retorno à Base");
         mapButton.setText("Retornar à Base");
+        pilotoAutomatico = false;
     }
 
     @FXML
@@ -418,6 +422,7 @@ public class HomeController implements Initializable {
         mapButton.setDisable(false);
         idEcra.setText("Piloto Automático");
         mapButton.setText("Ativar Piloto Automático");
+        pilotoAutomatico = true;
     }
 
     @FXML
@@ -542,6 +547,19 @@ public class HomeController implements Initializable {
     private void comunicaRobo(MouseEvent event) {
         Text notificacao = new Text ("A comunicação via Robô foi ativada.\n");
         escreveNotificacao(notificacao);
+    }
+
+    @FXML
+    private void mapButtonClicked(MouseEvent event) {
+        if (mapButton.getText().equals("Retornar à Base") || mapButton.getText().equals("Ativar Piloto Automático")) {
+            mapButton.setText("Cancelar");
+        }
+        else if (pilotoAutomatico){
+            mapButton.setText("Ativar Piloto Automático");
+        }
+        else {
+            mapButton.setText("Retornar à Base");
+        }
     }
     
 }
