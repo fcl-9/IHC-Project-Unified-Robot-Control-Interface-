@@ -104,6 +104,8 @@ public class LoginController implements Initializable {
         if(idText.getText().trim().isEmpty() && passText.getText().trim().isEmpty())
         {
             Alert alert = new Alert(AlertType.ERROR);
+            alert.initOwner(loginButton.getScene().getWindow());
+            alert.initStyle(StageStyle.UNDECORATED);
             alert.setTitle("Erro");
             alert.setHeaderText("Os campos de inserção de dados devem estar preenchidos.");
             alert.setContentText("Para efetuar login deve preencher os campos ID com o nome de "
@@ -114,6 +116,8 @@ public class LoginController implements Initializable {
         else if(idText.getText().trim().isEmpty())
         {
            Alert alert = new Alert(AlertType.ERROR);
+                       alert.initOwner(loginButton.getScene().getWindow());
+            alert.initStyle(StageStyle.UNDECORATED);
             alert.setTitle("Erro");
             alert.setHeaderText("Erro um dos campos de inserção de dados não foi preenchido.");
             alert.setContentText("Para efetuar login deve preencher o campo ID com o seu nome de utilizador");
@@ -122,6 +126,8 @@ public class LoginController implements Initializable {
         else if (passText.getText().trim().isEmpty())
         {
             Alert alert = new Alert(AlertType.ERROR);
+                        alert.initOwner(loginButton.getScene().getWindow());
+            alert.initStyle(StageStyle.UNDECORATED);
             alert.setTitle("Erro");
             alert.setHeaderText("Erro um dos campos de inserção de dados não foi preenchido.");
             alert.setContentText("Para efetuar login deve preencher ambos o campo Palavra Passe com a sua palavra passe.");
@@ -154,7 +160,7 @@ public class LoginController implements Initializable {
      */
     private void helpLoginHandle(MouseEvent event) {
         
-      
+      //Adds the black in front of the screen this will make the use to not be able to interacte with the login interface
         helpBlackLayout = new AnchorPane(); 
         gridMainWindow.add(helpBlackLayout, 0, 0,gridMainWindow.REMAINING,gridMainWindow.REMAINING);
         helpBlackLayout.setStyle("-fx-background-color: black;");
@@ -205,6 +211,7 @@ public class LoginController implements Initializable {
         AnchorPane.setTopAnchor(leaveHelp,posExitY);
         transparentAnchor.getChildren().add(leaveHelp);
         
+        //Adding dialogs to inform the user how to use the interface
         help_PowerButton = new Text(posPower.getMinX() - 1.5*powerButton.getWidth(),posPower.getMinY() + 1.5*powerButton.getHeight(),"Toque aqui para sair da aplicação");
         help_PowerButton.setFill(Color.WHITE);
         help_ExitHelp = new Text(posExitX - 2*40, posExitY + 1.5*40,"Toque aqui para sair da ajuda");
@@ -215,7 +222,8 @@ public class LoginController implements Initializable {
         help_password.setFill(Color.WHITE);
         help_login = new Text(posLogin.getMinX() + loginButton.getWidth(),posLogin.getMinY() + loginButton.getHeight()/2,"3) Toque em login para iniciar sessão");
         help_login.setFill(Color.WHITE);  
-
+        
+        
         transparentAnchor.getChildren().add(help_PowerButton);
         transparentAnchor.getChildren().add(help_ExitHelp);
         transparentAnchor.getChildren().add(help_id);
@@ -224,6 +232,9 @@ public class LoginController implements Initializable {
 
     }
     
+    /**
+     * This add a style to the button that will lead the user to leave the help screen on login interface
+     */
     private void leaveHelpButtonFunction(){
      helpBlackLayout.setStyle("-fx-background-color: transparent;");
      helpBlackLayout.setOpacity(1);
