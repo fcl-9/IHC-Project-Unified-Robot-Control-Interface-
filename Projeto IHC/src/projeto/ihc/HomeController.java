@@ -116,6 +116,11 @@ public class HomeController implements Initializable {
     @FXML
     private Circle circleBaixoMov;
     
+    private int camera1;
+    private int camera2;
+    private int camera3;
+    private int camera4;
+    
     
     private int joyOutputRange = 100;
     private double joySizeGarras, joySizeMov, posicaoX, posicaoY;
