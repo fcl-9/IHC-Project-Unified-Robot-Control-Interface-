@@ -25,13 +25,19 @@ public class ApresentaTempo implements Runnable{
     public void setRunning(boolean running) {
         this.running = running;
     }
-    
+    /**
+     * Writes the mission time in the screen 
+     * @param tempo 
+     */
     public ApresentaTempo (Text tempo) {
         this.tempo = tempo;
         this.running = true;
         start();
     }
     
+    /**
+     * This is the method who will be executed by the threads during the runtime.
+     */
     public void run() {
         ContaTempo apresentaTempo = new ContaTempo();
         SimpleDateFormat ft = new SimpleDateFormat ("HH:mm:ss");
@@ -45,7 +51,9 @@ public class ApresentaTempo implements Runnable{
             }
         }
     }
-   
+   /**
+    * Inicio das threads necessárias a mostra do tempo
+    */
     public void start ()
     {
         if (t == null)
