@@ -116,10 +116,10 @@ public class HomeController implements Initializable {
     @FXML
     private Circle circleBaixoMov;
     
-    private int camera1;
-    private int camera2;
-    private int camera3;
-    private int camera4;
+    private Image camFrente;
+    private Image camTras;
+    private Image camEsquerda;
+    private Image camDireita;
     
     
     private int joyOutputRange = 100;
@@ -174,9 +174,21 @@ public class HomeController implements Initializable {
     private CommonButtons comBtn;
     
     private boolean pilotoAutomatico;
+    @FXML
+    private Label cam2Label;
+    @FXML
+    private Label cam3Label;
+    @FXML
+    private Label cam4Label;
+    @FXML
+    private Label cam1Label;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        camFrente = cam1.getImage();
+        camTras = cam4.getImage();
+        camEsquerda = cam3.getImage();
+        camDireita = cam2.getImage();
         pilotoAutomatico = false;
         comBtn = new CommonButtons();
         robot = "";
@@ -185,14 +197,14 @@ public class HomeController implements Initializable {
         apresentaTempo = new ApresentaTempo(tempoMissao);
         myBrowser = new MyBrowser();
         map.getChildren().add(myBrowser);
-        cam1.fitWidthProperty().bind(camPane1.widthProperty());
+        /*cam1.fitWidthProperty().bind(camPane1.widthProperty());
         cam2.fitWidthProperty().bind(camPane2.widthProperty());
         cam3.fitWidthProperty().bind(camPane3.widthProperty());
         cam4.fitWidthProperty().bind(camPane4.widthProperty());
         cam1.fitHeightProperty().bind(camPane1.heightProperty());
         cam2.fitHeightProperty().bind(camPane2.heightProperty());
         cam3.fitHeightProperty().bind(camPane3.heightProperty());
-        cam4.fitHeightProperty().bind(camPane4.heightProperty());
+        cam4.fitHeightProperty().bind(camPane4.heightProperty());*/
         ToggleGroup groupComunicacao = new ToggleGroup();
         ToggleGroup groupOnOff = new ToggleGroup();
         ToggleGroup groupLuzes = new ToggleGroup();
@@ -383,26 +395,84 @@ public class HomeController implements Initializable {
 
     @FXML
     private void alternaCamara2(MouseEvent event) {
-        Image imagemCam2 = ((ImageView) event.getSource()).getImage();
-        Image camAtual = cam1.getImage();
-        cam1.setImage(imagemCam2);
-        cam2.setImage(camAtual);
+        Image cam1Atual = cam1.getImage();
+        Image cam2Atual = cam2.getImage();
+        mudaIamgens (cam1, cam2, cam1Label, cam2Label, cam1Atual, cam2Atual);
+    }
+    
+    private void mudaIamgens (ImageView camA, ImageView camB, Label labelA, Label labelB, Image camAAtual, Image camBAtual) {
+        camA.setImage(camBAtual);
+        camB.setImage(camAAtual);
+        if (camBAtual.equals(camEsquerda)) {
+            if (camAAtual.equals(camFrente)) {
+                labelB.setText("Frente");
+                labelA.setText("Esquerda");
+            }
+            else if (camAAtual.equals(camTras)) {
+                labelB.setText("Trás");
+                labelA.setText("Esquerda");
+            }
+            else if (camAAtual.equals(camDireita)) {
+                labelB.setText("Direita");
+                labelA.setText("Esquerda");
+            }
+        }
+        else if (camBAtual.equals(camFrente)) {
+            if (camAAtual.equals(camEsquerda)) {
+                labelB.setText("Esquerda");
+                labelA.setText("Frente");
+            }
+            else if (camAAtual.equals(camTras)) {
+                labelB.setText("Trás");
+                labelA.setText("Frente");
+            }
+            else if (camAAtual.equals(camDireita)) {
+                labelB.setText("Direita");
+                labelA.setText("Frente");
+            }
+        }
+        else if (camBAtual.equals(camDireita)) {
+            if (camAAtual.equals(camFrente)) {
+                labelB.setText("Frente");
+                labelA.setText("Direita");
+            }
+            else if (camAAtual.equals(camTras)) {
+                labelB.setText("Trás");
+                labelA.setText("Direita");
+            }
+            else if (camAAtual.equals(camEsquerda)) {
+                labelB.setText("Esquerda");
+                labelA.setText("Direita");
+            }
+        }
+        else if (camBAtual.equals(camTras)) {
+            if (camAAtual.equals(camFrente)) {
+                labelB.setText("Frente");
+                labelA.setText("Trás");
+            }
+            else if (camAAtual.equals(camEsquerda)) {
+                labelB.setText("Esquerda");
+                labelA.setText("Trás");
+            }
+            else if (camAAtual.equals(camDireita)) {
+                labelB.setText("Direita");
+                labelA.setText("Trás");
+            }
+        }
     }
 
     @FXML
     private void alternaCamara3(MouseEvent event) {
-        Image imagemCam3 = ((ImageView) event.getSource()).getImage();
-        Image camAtual = cam1.getImage();
-        cam1.setImage(imagemCam3);
-        cam3.setImage(camAtual);
+        Image cam1Atual = cam1.getImage();
+        Image cam3Atual = cam3.getImage();
+        mudaIamgens (cam1, cam3, cam1Label, cam3Label, cam1Atual, cam3Atual);
     }
 
     @FXML
     private void alternaCamara4(MouseEvent event) {
-        Image imagemCam4 = ((ImageView) event.getSource()).getImage();
-        Image camAtual = cam1.getImage();
-        cam1.setImage(imagemCam4);
-        cam4.setImage(camAtual);
+        Image cam1Atual = cam1.getImage();
+        Image cam4Atual = cam4.getImage();
+        mudaIamgens (cam1, cam4, cam1Label, cam4Label, cam1Atual, cam4Atual);
     }
 
     @FXML
