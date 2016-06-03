@@ -86,6 +86,10 @@ public class DefinicoesController implements Initializable {
         }
     }
     
+    /**
+     * This method will indicate the robot that is select because of the transitions to previous screens
+     * @param name 
+     */
     public void setRobot (String name) {
         robot = name;
     }

@@ -52,7 +52,7 @@ public class ApresentaTempo implements Runnable{
         }
     }
    /**
-    * Inicio das threads necessárias a mostra do tempo
+    * Starts the thread that will be showing the system time.
     */
     public void start ()
     {

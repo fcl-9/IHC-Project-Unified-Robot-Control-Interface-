@@ -19,12 +19,18 @@ import javafx.scene.text.Text;
 public class ContaTempo implements Runnable{
     private Thread t;
     private static float tempoPassado;
-
+    
+    /**
+     *  This will return the time that has past since the mission start
+     * @return 
+     */
     public static float getTempoPassado() {
         return tempoPassado;
     }
    
-    
+    /**
+     * This is the method that will be used by the running thread to update the mission time
+     */
     public void run() {
         GregorianCalendar inicio = new GregorianCalendar();
         while (true) {
@@ -33,6 +39,9 @@ public class ContaTempo implements Runnable{
         }
     }
    
+    /**
+     * Starts the thread that will be updating the system time.
+     */
     public void start ()
     {
         if (t == null)
