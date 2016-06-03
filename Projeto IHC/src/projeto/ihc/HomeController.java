@@ -316,6 +316,9 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method willl allow the virtual joystick to work 
+     */
     private void controlaGarra(MouseEvent event) {
         double offsetX = event.getSceneX() - orgSceneX;
         double offsetY = event.getSceneY() - orgSceneY;
@@ -341,6 +344,9 @@ public class HomeController implements Initializable {
     }
     
     @FXML
+    /**
+     * This method makes the smallest ball to move to the place where i'm moving the mouse
+     */
     private void tocaControlGarra(MouseEvent event) {
         orgSceneX = event.getSceneX();
         orgSceneY = event.getSceneY();
@@ -349,12 +355,18 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method makes the ball that fallow the mouse to return to the center when the mouse isn't being pressed.
+     */
     private void libertaControlGarra(MouseEvent event) {
         ((Circle)(event.getSource())).setTranslateX(orgTranslateX);
         ((Circle)(event.getSource())).setTranslateY(orgTranslateY);
     }
     
      @FXML
+     /**
+     * This method willl allow the virtual joystick to work 
+     */
     private void controlaMovimento(MouseEvent event) {
         double offsetX = event.getSceneX() - orgSceneX;
         double offsetY = event.getSceneY() - orgSceneY;
@@ -380,6 +392,9 @@ public class HomeController implements Initializable {
     }
     
     @FXML
+    /**
+     * This method makes the smallest ball to move to the place where i'm moving the mouse
+     */
     private void tocaControlMovimento(MouseEvent event) {
         orgSceneX = event.getSceneX();
         orgSceneY = event.getSceneY();
@@ -388,18 +403,33 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method makes the ball that fallow the mouse to return to the center when the mouse isn't being pressed.
+     */
     private void libertaControlMovimento(MouseEvent event) {
         ((Circle)(event.getSource())).setTranslateX(orgTranslateX);
         ((Circle)(event.getSource())).setTranslateY(orgTranslateY);
     }
 
     @FXML
+    /**
+     * This method will change the main camera image1 with the image that comes from the camera 2
+     */
     private void alternaCamara2(MouseEvent event) {
         Image cam1Atual = cam1.getImage();
         Image cam2Atual = cam2.getImage();
         mudaIamgens (cam1, cam2, cam1Label, cam2Label, cam1Atual, cam2Atual);
     }
     
+    /**
+     * Makes it possible to change the cameras image and labels the cameras when they're changed.
+     * @param camA
+     * @param camB
+     * @param labelA
+     * @param labelB
+     * @param camAAtual
+     * @param camBAtual 
+     */
     private void mudaIamgens (ImageView camA, ImageView camB, Label labelA, Label labelB, Image camAAtual, Image camBAtual) {
         camA.setImage(camBAtual);
         camB.setImage(camAAtual);
@@ -462,6 +492,9 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This will change the image from the main camera1 with the camera3
+     */
     private void alternaCamara3(MouseEvent event) {
         Image cam1Atual = cam1.getImage();
         Image cam3Atual = cam3.getImage();
@@ -469,6 +502,9 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method will change the camera 1 image with the camera number 4 image
+     */
     private void alternaCamara4(MouseEvent event) {
         Image cam1Atual = cam1.getImage();
         Image cam4Atual = cam4.getImage();
@@ -476,6 +512,9 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method will allow a user to activate the go back to base functionality
+     */
     private void goBackToBase(MouseEvent event) {
         tabPane.getSelectionModel().select(1);
         mapButton.setOpacity(100);
@@ -486,6 +525,9 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method will allow the user to activate the autopilot functionality
+     */
     private void goPilotoAutomatico(MouseEvent event) {
         tabPane.getSelectionModel().select(1);
         mapButton.setOpacity(100);
@@ -496,11 +538,17 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method changes the title of the screnn when you click in the cameras tab
+     */
     private void camTabClicked(Event event) {
         idEcra.setText("Home");
     }
 
     @FXML
+     /**
+     * This method changes the title of the screnn when you click in the map tab
+     */
     private void mapTabClicked(Event event) {
         idEcra.setText("Mapa");
         mapButton.setOpacity(0);
@@ -508,11 +556,17 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+     /**
+     * This method changes the title of the screnn when you click in the functions tab
+     */
     private void funcTabClicked(Event event) {
         idEcra.setText("Funções");
     }
 
     @FXML
+     /**
+     * This method turn on or off the recording functionality
+     */
     private void recButtonClicked(MouseEvent event) {
         if (!gravar) {
             recInfo.setOpacity(100);
@@ -524,6 +578,10 @@ public class HomeController implements Initializable {
         
     }
     
+    /**
+     * This method ajusts the interface to the selected robot
+     * @param name 
+     */
     public void setRobot (String name) {
         robot = name;
         if (robot.equals("Waterbot")) {
@@ -546,6 +604,11 @@ public class HomeController implements Initializable {
         }
     }
     
+    /**
+     * This creates a fade out effect in the notifications
+     * @param node
+     * @return 
+     */
     private FadeTransition createFader(Node node) {
         FadeTransition fade = new FadeTransition(Duration.seconds(5), node);
         fade.setFromValue(1);
@@ -570,6 +633,9 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method turn on the robot
+     */
     private void ligaRobo(MouseEvent event) {
         cam1.setOpacity(100);
         cam2.setOpacity(100);
@@ -580,6 +646,9 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method turn off the robot
+     */
     private void desligaRobo(MouseEvent event) {
         cam1.setOpacity(0);
         cam2.setOpacity(0);
@@ -590,36 +659,54 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    /**
+     * This method turn on the lights
+     */
     private void ligaLuzes(MouseEvent event) {
         Text notificacao = new Text ("As luzes do robô foram ligadas.\n");
         escreveNotificacao(notificacao);
     }
 
     @FXML
+    /**
+     * This method turn off the lights
+     */
     private void desligaLuzes(MouseEvent event) {
         Text notificacao = new Text ("As luzes do robô foram desligadas.\n");
         escreveNotificacao(notificacao);
     }
 
     @FXML
+    /**
+     * This method starts the team communication
+     */
     private void comunicaEquipa(MouseEvent event) {
         Text notificacao = new Text ("A comunicação com a equipa foi ativada.\n");
         escreveNotificacao(notificacao);
     }
 
     @FXML
+    /**
+     * This method turn off the communication
+     */
     private void desligaComunicacao(MouseEvent event) {
         Text notificacao = new Text ("A comunicação foi desativada.\n");
         escreveNotificacao(notificacao);
     }
 
     @FXML
+    /**
+     * This method turn on with the robot
+     */
     private void comunicaRobo(MouseEvent event) {
         Text notificacao = new Text ("A comunicação via Robô foi ativada.\n");
         escreveNotificacao(notificacao);
     }
 
     @FXML
+    /**
+     * This method activates or cancelas the autopilot and the goback to base functionalities
+     */
     private void mapButtonClicked(MouseEvent event) {
         if (mapButton.getText().equals("Retornar à Base") || mapButton.getText().equals("Ativar Piloto Automático")) {
             mapButton.setText("Cancelar");
@@ -634,6 +721,10 @@ public class HomeController implements Initializable {
     
 }
 
+/**
+ * Google maps integration in the maps tab
+ * @author vmcba
+ */
 class MyBrowser extends Region{
 
     HBox toolbar;
