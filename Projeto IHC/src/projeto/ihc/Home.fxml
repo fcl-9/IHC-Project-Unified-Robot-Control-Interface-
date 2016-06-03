@@ -82,33 +82,51 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Pane fx:id="camPane2" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 0 0 2 0;">
+                                    <AnchorPane fx:id="camPane2">
                                        <children>
                                            
-                                          <ImageView fx:id="cam2" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara2" pickOnBounds="true">
+                                                                  <ImageView fx:id="cam2" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara2" pickOnBounds="true">
                                              <image>
                                                 <Image url="@../../img/P60507-105728.jpg" />
                                              </image>
                                           </ImageView>
-                                       </children></Pane>
-                                    <Pane fx:id="camPane3" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 0 0 2 0;" GridPane.rowIndex="1">
+                                          <Label fx:id="cam2Label" style="-fx-background-color: black;" text="Direita" textFill="WHITE">
+                                             <font>
+                                                <Font name="Balsamiq Sans" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="camPane3" GridPane.rowIndex="1">
                                        <children>
                                            
-                                          <ImageView fx:id="cam3" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara3" pickOnBounds="true">
+                                                <ImageView fx:id="cam3" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara3" pickOnBounds="true">
                                              <image>
                                                 <Image url="@../../img/P60507-105743.jpg" />
                                              </image>
                                           </ImageView>
-                                       </children></Pane>
-                                    <Pane fx:id="camPane4" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                          <Label fx:id="cam3Label" style="-fx-background-color: black;" text="Esquerda" textFill="WHITE">
+                                             <font>
+                                                <Font name="Balsamiq Sans" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="camPane4" GridPane.rowIndex="2">
                                        <children>
                                            
-                                          <ImageView fx:id="cam4" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara4" pickOnBounds="true">
+                                                <ImageView fx:id="cam4" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara4" pickOnBounds="true">
                                              <image>
                                                 <Image url="@../../img/P60507-105734.jpg" />
                                              </image>
                                           </ImageView>
-                                       </children></Pane>
+                                          <Label fx:id="cam4Label" style="-fx-background-color: black;" text="Trás" textFill="WHITE">
+                                             <font>
+                                                <Font name="Balsamiq Sans" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </GridPane>
                            </children></AnchorPane>
@@ -147,7 +165,7 @@
                                           <Font name="Balsamiq Sans" size="18.0" />
                                        </font></Text>
                                     <Pane fx:id="map" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
-                                    <Button fx:id="mapButton" mnemonicParsing="false" onMouseClicked="#garrasButtonClicked" prefHeight="35.0" prefWidth="349.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Map Button" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Button fx:id="mapButton" mnemonicParsing="false" onMouseClicked="#mapButtonClicked" prefHeight="35.0" prefWidth="349.0" style="-fx-background-color: #256b25; -fx-border-color: black; -fx-border-radius: 0;" text="Map Button" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="Balsamiq Sans" size="18.0" />
                                        </font>
@@ -505,9 +523,9 @@
                   <GridPane GridPane.rowIndex="2">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.33334350585938" minWidth="0.0" prefWidth="16.000001907348633" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.99999809265137" minWidth="10.0" prefWidth="465.99999809265137" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.6666259765625" minWidth="10.0" prefWidth="229.6666259765625" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.99999809265137" minWidth="10.0" prefWidth="102.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="658.0" minWidth="10.0" prefWidth="622.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.6666259765625" minWidth="10.0" prefWidth="98.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.3333740234375" minWidth="8.3333740234375" prefWidth="16.3333740234375" />
                     </columnConstraints>
                     <rowConstraints>
@@ -516,6 +534,10 @@
                      <children>
                         <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="42.0" style="-fx-background-image: url('/img/minusIcon.png'); -fx-background-color: transparent; -fx-background-position: center; -fx-background-repeat: no-repeat;" GridPane.columnIndex="1" />
                         <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="42.0" style="-fx-background-image: url('/img/plusIcon.png'); -fx-background-color: transparent; -fx-background-position: center; -fx-background-repeat: no-repeat;" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+                        <Label fx:id="cam1Label" style="-fx-background-color: black;" text="Frente" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Balsamiq Sans" size="18.0" />
+                           </font></Label>
                      </children>
                   </GridPane>
                </children>
