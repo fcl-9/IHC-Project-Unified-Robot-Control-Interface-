@@ -104,6 +104,8 @@ public class LoginController implements Initializable {
         if(idText.getText().trim().isEmpty() && passText.getText().trim().isEmpty())
         {
             Alert alert = new Alert(AlertType.ERROR);
+            alert.initOwner(loginButton.getScene().getWindow());
+            alert.initStyle(StageStyle.UNDECORATED);
             alert.setTitle("Erro");
             alert.setHeaderText("Os campos de inserção de dados devem estar preenchidos.");
             alert.setContentText("Para efetuar login deve preencher os campos ID com o nome de "
@@ -114,6 +116,8 @@ public class LoginController implements Initializable {
         else if(idText.getText().trim().isEmpty())
         {
            Alert alert = new Alert(AlertType.ERROR);
+                       alert.initOwner(loginButton.getScene().getWindow());
+            alert.initStyle(StageStyle.UNDECORATED);
             alert.setTitle("Erro");
             alert.setHeaderText("Erro um dos campos de inserção de dados não foi preenchido.");
             alert.setContentText("Para efetuar login deve preencher o campo ID com o seu nome de utilizador");
@@ -122,6 +126,8 @@ public class LoginController implements Initializable {
         else if (passText.getText().trim().isEmpty())
         {
             Alert alert = new Alert(AlertType.ERROR);
+                        alert.initOwner(loginButton.getScene().getWindow());
+            alert.initStyle(StageStyle.UNDECORATED);
             alert.setTitle("Erro");
             alert.setHeaderText("Erro um dos campos de inserção de dados não foi preenchido.");
             alert.setContentText("Para efetuar login deve preencher ambos o campo Palavra Passe com a sua palavra passe.");
