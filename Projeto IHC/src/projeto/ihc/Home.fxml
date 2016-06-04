@@ -82,10 +82,10 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <AnchorPane fx:id="camPane2">
+                                    <Pane fx:id="camPane2">
                                        <children>
                                            
-                                                                  <ImageView fx:id="cam2" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara2" pickOnBounds="true">
+                                                                        <ImageView fx:id="cam2" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara2" pickOnBounds="true">
                                              <image>
                                                 <Image url="@../../img/P60507-105728.jpg" />
                                              </image>
@@ -96,11 +96,11 @@
                                              </font>
                                           </Label>
                                        </children>
-                                    </AnchorPane>
-                                    <AnchorPane fx:id="camPane3" GridPane.rowIndex="1">
+                                    </Pane>
+                                    <Pane fx:id="camPane3" GridPane.rowIndex="1">
                                        <children>
                                            
-                                                <ImageView fx:id="cam3" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara3" pickOnBounds="true">
+                                                      <ImageView fx:id="cam3" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara3" pickOnBounds="true">
                                              <image>
                                                 <Image url="@../../img/P60507-105743.jpg" />
                                              </image>
@@ -111,11 +111,11 @@
                                              </font>
                                           </Label>
                                        </children>
-                                    </AnchorPane>
-                                    <AnchorPane fx:id="camPane4" GridPane.rowIndex="2">
+                                    </Pane>
+                                    <Pane fx:id="camPane4" GridPane.rowIndex="2">
                                        <children>
                                            
-                                                <ImageView fx:id="cam4" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara4" pickOnBounds="true">
+                                                      <ImageView fx:id="cam4" fitHeight="121.0" fitWidth="361.0" onMouseClicked="#alternaCamara4" pickOnBounds="true">
                                              <image>
                                                 <Image url="@../../img/P60507-105734.jpg" />
                                              </image>
@@ -126,7 +126,7 @@
                                              </font>
                                           </Label>
                                        </children>
-                                    </AnchorPane>
+                                    </Pane>
                                  </children>
                               </GridPane>
                            </children></AnchorPane>
