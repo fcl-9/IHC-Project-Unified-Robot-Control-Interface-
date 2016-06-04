@@ -90,15 +90,7 @@ public class HomeController implements Initializable {
     @FXML
     private ImageView cam4;
     @FXML
-    private ImageView cam1;
-    @FXML
-    private Pane camPane2;
-    @FXML
-    private Pane camPane3;
-    @FXML
-    private Pane camPane4;
-    @FXML
-    private Pane camPane1;
+    private ImageView cam1;;
     @FXML
     private AnchorPane paneGarraBaixo;
     @FXML
@@ -182,6 +174,14 @@ public class HomeController implements Initializable {
     private Label cam4Label;
     @FXML
     private Label cam1Label;
+    @FXML
+    private Pane camPane2;
+    @FXML
+    private Pane camPane3;
+    @FXML
+    private Pane camPane4;
+    @FXML
+    private Pane camPane1;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -197,14 +197,14 @@ public class HomeController implements Initializable {
         apresentaTempo = new ApresentaTempo(tempoMissao);
         myBrowser = new MyBrowser();
         map.getChildren().add(myBrowser);
-        /*cam1.fitWidthProperty().bind(camPane1.widthProperty());
+        cam1.fitWidthProperty().bind(camPane1.widthProperty());
         cam2.fitWidthProperty().bind(camPane2.widthProperty());
         cam3.fitWidthProperty().bind(camPane3.widthProperty());
         cam4.fitWidthProperty().bind(camPane4.widthProperty());
         cam1.fitHeightProperty().bind(camPane1.heightProperty());
         cam2.fitHeightProperty().bind(camPane2.heightProperty());
         cam3.fitHeightProperty().bind(camPane3.heightProperty());
-        cam4.fitHeightProperty().bind(camPane4.heightProperty());*/
+        cam4.fitHeightProperty().bind(camPane4.heightProperty());
         ToggleGroup groupComunicacao = new ToggleGroup();
         ToggleGroup groupOnOff = new ToggleGroup();
         ToggleGroup groupLuzes = new ToggleGroup();
